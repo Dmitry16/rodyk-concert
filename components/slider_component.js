@@ -5,12 +5,18 @@ import ReactDOM from 'react-dom';
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {allPics: this.props.allPics}
   }
+  showAllPics() {
+    this.setState({allPics:true},function(){
+      this.props.allPics(this.state.allPics);
+    });
+  }
+
   render() {
     return (
 
-	    <div id="wrapper-fotos" class="icons-wrapper fotos">
+	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
         <div className="icons-wrapper fotos">
           {this.props.images.map(function (img,index) {
             return (
@@ -20,6 +26,9 @@ class Slider extends React.Component {
             )
           })}
         </div>
+        <section className="button-more-section">
+          <button className="button-more" onClick={this.showAllPics.bind(this)}>Ver todas fotos</button>
+        </section>
       </div>
     )
   }

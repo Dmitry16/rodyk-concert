@@ -2,16 +2,16 @@ body {
   background: #fda !important;
 }
 header {
-margin: 5% 0;
-padding: 2% 0;
-background: #aee8a7;
+  margin: 5% 0;
+  padding: 2% 0;
+  background: #aee8a7;
 }
 h1.site-title {
   width: 100%;
   text-align: center;
   padding: 0;
 }
-.icon, .header-logo-title {
+.icon, .header-logo-title, .icons-wrapper.album-fotos {
   display: flex;
   flex-direction: column;
   justify-content: center;

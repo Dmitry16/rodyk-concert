@@ -39,17 +39,34 @@ require ('./production/css/newstyle.css');
 class App extends React.Component {
   constructor() {
     super();
+		this.state = {
+			components : [
+				<HeaderLarge key="1" />,
+				<SliderTop key="2" />,
+				<Manifesto key="3" />,
+				<CTA key="4" />,
+				<Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />,
+				<Footer key="6" />
+			]
+		}
   }
 
+	showAllPics(allPics) {
+		this.setState({components:[
+				<HeaderLarge key="1" />,
+				<Footer key="6" />
+		]})
+	}
+
   render() {
+
+		// let components = this.state.components.map((component, id)=>{
+		// 	return component;
+		// });
+
     return (
 			<div>
-				<HeaderLarge />
-				<SliderTop />
-				<Manifesto />
-				<CTA />
-				<Slider images={imgsObj.imgs} />
-				<Footer />
+				{this.state.components}
 			</div>
     )
   }
