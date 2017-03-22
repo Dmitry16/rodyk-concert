@@ -1,0 +1,38 @@
+
+
+.flex-column
+	display: flex
+	flex-direction: column
+	justify-content: center
+
+.section1, .ofertas, .about, .portfolio, .manifesto
+
+	width: 100%
+	margin: 0% auto 10%
+	padding: 7% 0 5% 0
+	@extend .flex-column
+	text-align: center
+	overflow: hidden
+
+.section1.icons-wrapper a, .portfolio.icons-wrapper a
+  margin: 0.5%
+
+.icons-wrapper
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+  margin: 7% 0 0 0
+	padding: 7% 0 5% 0
+
+.portfolio-wrapper
+	@extend .flex-column
+	text-align: center
+
+p.quien-somos
+		text-align: center
+
+.quien-somos, .manifesto
+	padding: 0 2%
+	// columns: 2 150px
+	// column-rule: solid 1px coral
+	// column-gap: 1.5em

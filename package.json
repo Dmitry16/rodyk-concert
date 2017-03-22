@@ -1,0 +1,36 @@
+{
+  "name": "anunnaki",
+  "version": "1.0.0",
+  "description": "web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --progress --inline --hot"
+  },
+  "dependencies": {
+    "file-loader": "^0.10.1",
+    "html-loader": "^0.4.5",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.27.3",
+    "node-sass": "^4.5.0",
+    "react-hot-loader": "^1.3.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.14.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "keywords": [
+    "anunnaki"
+  ],
+  "author": "Dmitry",
+  "license": "ISC"
+}

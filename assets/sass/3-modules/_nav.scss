@@ -1,0 +1,33 @@
+// nav {
+//   // display: flex;
+//   // flex-direction: column;
+//   // justify-content: center;
+//   margin-top: 1%;
+//   background: $c13;
+// }
+ul.main-nav {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: tint($c2, 0%);
+}
+ul.main-nav li {
+  padding: 1% 0;
+  width: 12%;
+  text-align: center;
+  list-style: none;
+}
+ul.main-nav li a {
+  color: #eee;
+}
+ul.main-nav li:hover {
+  background: coral;
+}
+ul.main-nav li:hover>a{
+  font-weight: 500;
+  color: darken($c2,10%);
+}
+ul.main-nav li {
+  border: none;
+}
