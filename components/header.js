@@ -7,10 +7,12 @@ class HeaderLarge extends React.Component {
 
   render() {
     return (
-      <div className="header-logo-title">
-        <p className="icon-apple"></p>
-        <h1 className="site-title">Receptum in Natura</h1>
-      </div>
+      <header className="header">
+        <div className="header-logo-title">
+          <p className="icon-apple"></p>
+          <h1 className="site-title">Receptum in Natura</h1>
+        </div>
+      </header>
     )
   }
 }

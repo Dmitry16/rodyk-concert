@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './app.js',
+  entry: './App.js',
 
   output: {
     //path: '/home/dd/work/anunnaki2/app/build',

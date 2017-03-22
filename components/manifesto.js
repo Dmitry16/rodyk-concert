@@ -7,7 +7,7 @@ class Manifesto extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="manifesto">
         <div className="title-front">
           <h3>Nuestro Manifesto</h3>
         </div>

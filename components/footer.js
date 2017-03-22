@@ -7,9 +7,9 @@ class Footer extends React.Component {
 
   render() {
     return (
-      <div>
+      <footer className="footer" role="contentinfo">
 
-        <div className="footer-logo">
+        <div  className="footer-logo">
           <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image"/>
         </div>
 
@@ -36,7 +36,7 @@ class Footer extends React.Component {
         <hr />
         <p>Disclaimer area lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nostrum repudiandae saepe.</p>
 
-    </div>
+    </footer>
   );
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 class SliderTop extends React.Component {
 	render() {
 		return (
-			<div>
+			<div id="slider" className="hero">
 				<img src='./assets/img/album/17.jpeg' alt='xxx' className="slider-img in" />
 				<img src='./assets/img/album/13.jpeg' alt='xxx' className="slider-img out" />
 				<img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />

@@ -9,14 +9,17 @@ class Slider extends React.Component {
   }
   render() {
     return (
-      <div className="icons-wrapper fotos">
-        {this.props.images.map(function (img,index) {
-          return (
-            <div key={index} className="img sm">
-		          <img src={img.src} alt={img.alt} className={img.class} />
-						</div>
-          )
-        })}
+
+	    <div id="wrapper-fotos" class="icons-wrapper fotos">
+        <div className="icons-wrapper fotos">
+          {this.props.images.map(function (img,index) {
+            return (
+              <div key={index} className="img sm">
+  		          <img src={img.src} alt={img.alt} className={img.class} />
+  						</div>
+            )
+          })}
+        </div>
       </div>
     )
   }
