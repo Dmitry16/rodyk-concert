@@ -25,6 +25,7 @@ const imgsObj = {
 // Libs
 import React from "react";
 import ReactDOM from "react-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // Components
 import HeaderLarge from "./components/header";
 import Manifesto from "./components/manifesto";
@@ -41,12 +42,7 @@ class App extends React.Component {
     super();
 		this.state = {
 			components : [
-				<HeaderLarge key="1" />,
-				<SliderTop key="2" />,
-				<Manifesto key="3" />,
-				<CTA key="4" />,
-				<Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />,
-				<Footer key="6" />
+
 			]
 		}
   }
@@ -54,22 +50,24 @@ class App extends React.Component {
 	showAllPics(allPics) {
 		this.setState({components:[
 				<HeaderLarge key="1" />,
+				<Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />,
 				<Footer key="6" />
 		]})
 	}
 
   render() {
 
-		// let components = this.state.components.map((component, id)=>{
-		// 	return component;
-		// });
-
     return (
-			<div>
-				{this.state.components}
-			</div>
+      <div>
+        <HeaderLarge />
+        <SliderTop />
+        <Manifesto />
+        <CTA />
+        <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />
+        <Footer />
+      </div>
     )
   }
 }
 
-ReactDOM.render( <App />, document.getElementById("zz"));
+export default App;
