@@ -25,6 +25,7 @@ const imgsObj = {
 // Libs
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
 // import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 // Components
 import HeaderLarge from "./components/header";
@@ -34,6 +35,7 @@ import Slider from "./components/slider_component";
 import CTA from "./components/cta";
 import Modal from "./components/modal";
 import SliderTop from "./components/slider-top";
+import MainNav from "./components/nav";
 // css
 require ('./production/css/newstyle.css');
 
@@ -42,9 +44,20 @@ class App extends React.Component {
     super();
 		this.state = {
 			components : [
-
+        <MainNav key="0" activeLink={this.openActiveLink.bind(this)} />,
+        <HeaderLarge key="1" />,
+        <SliderTop key="2" />,
+        <Manifesto key="3" />,
+        <CTA key="4" />,
+        <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />      ,
+        <Footer key="6" />
 			]
 		}
+  }
+  openActiveLink(activeLink) {
+    this.setState({components:[
+      <MainNav key="0" activeLink={this.openActiveLink.bind(this)} />
+    ]})
   }
 
 	showAllPics(allPics) {
@@ -58,14 +71,9 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
-        <HeaderLarge />
-        <SliderTop />
-        <Manifesto />
-        <CTA />
-        <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />
-        <Footer />
-      </div>
+        <div>
+          {this.state.components}
+        </div>
     )
   }
 }

@@ -14,17 +14,19 @@ import Slider from "./components/slider_component";
 import CTA from "./components/cta";
 import Modal from "./components/modal";
 import SliderTop from "./components/slider-top";
+import MainNav from "./components/nav";
 
 render ((
-  <App >
-  <Router>
-    <Switch>
-      <Route path="/" component={HeaderLarge} />,
-      <Route path="/" component={SliderTop} />,
-      <Route path="/" component={Manifesto} />,
-      <Route path="/" component={CTA} />,
-      <Route path="/" component={Footer} />
-    </Switch>
-  </Router>
-  </App>
+
+    <Router>
+      <App>
+        <Route path="/" component={MainNav} />
+        <Route path="/home" component={CTA} />
+        <Route path="/manifesto" component={Manifesto} />
+        <Route path="/fotos" component={Slider} />
+        <Route path="/contacto" component={Footer} />
+      </App>
+    </Router>
+
+
 ), document.getElementById("zz"));
