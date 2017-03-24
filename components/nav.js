@@ -4,23 +4,25 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Manifesto from "./manifesto";
 import HeaderLarge from "./header";
-import CTA from "./cta";
+import SliderTop from "./slider-top";
+import AllPics from "./allpics";
 
-// export default class MainNav extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {}
-//   }
+export default class MainNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {rerender: false}
+  }
   // componentDidMount() {
   //   this.setState({activeLink: "/home"})
   // }
 
-  // handleLink() {
-  //   this.setState({activeLink: "/manifesto"}, function(){
-  //     this.props.activeLink(this.state.activeLink);
-  //   })
-  // }
-  const Nav = () => (
+  handleLink() {
+    this.setState({rerender: true}, function(){
+      this.props.activeLink(this.state.rerender);
+    })
+  }
+  render() {
+    return (
     <Router>
       <div>
         <ul className="main-nav">
@@ -33,43 +35,16 @@ import CTA from "./cta";
           <li>
             <Link to='/header'>Header</Link>
           </li>
+          <li>
+            <Link onClick={this.handleLink.bind(this)} to='/fotos'>Fotos</Link>
+          </li>
         </ul>
 
-        <Route exact path="/" component={CTA}/>
         <Route path="/about" component={Manifesto}/>
         <Route path="/header" component={HeaderLarge}/>
+        <Route path="/fotos" component={AllPics}/>
       </div>
     </Router>
-  )
-// const Nav = ({ match }) => (
-//
-//       <ul className="main-nav">
-//         <li>
-//           <Link to={`${match.url}/home`}>Home</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/manifesto`}>Manifesto</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/whoweare`}>Quien somos</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/icons`}>Que hacemos</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/fotos`}>Fotos</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/blog`}>Blog</Link>
-//         </li>
-//         <li>
-//           <Link to={`${match.url}/contacto`}>Contacto</Link>
-//         </li>
-//       </ul>
-//     );
-//
-// <Route path={match.url} render={() => (
-//   <h3>Please select a topic.</h3>
-// )}/>
-
-export default Nav;
+    )
+  }
+}

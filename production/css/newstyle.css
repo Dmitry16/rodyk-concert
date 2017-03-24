@@ -17,3 +17,6 @@ h1.site-title {
   justify-content: center;
   align-items: center;
 }
+.all_pics {
+  display: flex;
+}
