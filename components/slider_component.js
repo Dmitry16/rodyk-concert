@@ -1,34 +1,68 @@
+const imgsObj = {
+  imgs : [
+    {
+      src: './assets/img/album/7.jpeg',
+      alt: 'jojo',
+      class: 'front-pics'
+    },
+    {
+      src: './assets/img/album/8.jpeg',
+      alt: 'jojo',
+      class: 'front-pics'
+    },
+    {
+      src: './assets/img/album/9.jpeg',
+      alt: 'jojo',
+      class: 'front-pics'
+    },
+		{
+      src: './assets/img/album/17.jpeg',
+      alt: 'jojo',
+      class: 'front-pics'
+    },
+  ]
+}
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 //require ('./components/slider_core.js');
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import AllPics from "./allpics";
 
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {allPics: this.props.allPics}
+    // this.state = {allPics: this.props.allPics}
   }
-  showAllPics() {
-    this.setState({allPics:true},function(){
-      this.props.allPics(this.state.allPics);
-    });
-  }
+  // showAllPics() {
+  //   // console.log(match.url);
+  //   this.setState({allPics:true},function(){
+  //     this.props.allPics(this.state.allPics);
+  //   });
+  // }
+
+  // <div className="icons-wrapper fotos">
+  //   {imgsObj.imgs(function (img,index) {
+  //     return (
+  //       <div key={index} className="img sm">
+  //         <img src={img.src} alt={img.alt} className={img.class} />
+  //       </div>
+  //     )
+  //   })}
+  // </div>
 
   render() {
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
-        <div className="icons-wrapper fotos">
-          {this.props.images.map(function (img,index) {
-            return (
-              <div key={index} className="img sm">
-  		          <img src={img.src} alt={img.alt} className={img.class} />
-  						</div>
-            )
-          })}
-        </div>
+
         <section className="button-more-section">
-          <button className="button-more" onClick={this.showAllPics.bind(this)}>Ver todas fotos</button>
+        <Link to="/fotos" className="button-more">
+          Ver todas fotos
+        </Link>
         </section>
+
       </div>
     )
   }

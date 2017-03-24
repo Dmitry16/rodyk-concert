@@ -1,27 +1,4 @@
-const imgsObj = {
-  imgs : [
-    {
-      src: './assets/img/album/7.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-    {
-      src: './assets/img/album/8.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-    {
-      src: './assets/img/album/9.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-		{
-      src: './assets/img/album/17.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-  ]
-}
+
 // Libs
 import React from "react";
 import ReactDOM from "react-dom";
@@ -45,38 +22,37 @@ class App extends React.Component {
     super();
 		this.state = {
 			components : [
-        <HeaderLarge key="0"/>,
-        <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
-        <SliderTop key="2"/>,
-        <Manifesto key="3"/>,
-        <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="4" />,
-        <CTA key="5"/>,
-        <Footer key="6"/>,
+        // <HeaderLarge key="0"/>,
+        // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
+        // <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="4" />,
+        // <Footer key="6"/>,
 			]
 		}
   }
   openActiveLink(rerender) {
     this.setState({components:[
-      <HeaderLarge key="0"/>,
-      <MainNav key="1" activeLink={this.openActiveLink.bind(this)} />,
-      <Footer key="6"/>,
+      // <HeaderLarge key="0"/>,
+      // <MainNav key="1" activeLink={this.openActiveLink.bind(this)} />,
+      // <Footer key="6"/>,
     ]})
   }
 
 	showAllPics(allPics) {
 		this.setState({components:[
-				<HeaderLarge key="0" />,
-        <MainNav key="1"/>,
-				<Footer key="6" />
+				// <HeaderLarge key="0" />,
+        // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
+				// <Footer key="6" />
 		]})
 	}
 
   render() {
 
     return (
+
         <div>
           {this.state.components}
         </div>
+
     )
   }
 }

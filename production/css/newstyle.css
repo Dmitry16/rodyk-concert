@@ -11,7 +11,8 @@ h1.site-title {
   text-align: center;
   padding: 0;
 }
-.icon, .header-logo-title, .icons-wrapper.album-fotos {
+.icon, .header-logo-title, .icons-wrapper.album-fotos,
+.all_pics_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,4 +20,11 @@ h1.site-title {
 }
 .all_pics {
   display: flex;
+  flex-wrap: wrap;
+}
+.all_pics_section {
+  margin: 5% 0;
+}
+.all_pics_section h3 {
+  margin: 0 0 5% 0;
 }

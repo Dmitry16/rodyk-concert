@@ -50,8 +50,11 @@ export default class AllPics extends React.Component {
     });
 
     return (
-      <div className="all_pics">
-        {pics}
+      <div className="all_pics_section">
+        <h3 className="title-front">Album de Fotos</h3>
+        <div className="all_pics">
+          {pics}
+        </div>
       </div>
     )
   }
