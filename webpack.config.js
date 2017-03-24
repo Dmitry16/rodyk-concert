@@ -2,7 +2,7 @@ module.exports = {
   entry: './index.js',
 
   output: {
-    //path: '/home/dd/work/anunnaki2/app/build',
+    publicPath: '/',
     filename: 'bundle.js'
   },
 

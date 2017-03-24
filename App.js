@@ -44,29 +44,24 @@ class App extends React.Component {
     super();
 		this.state = {
 			components : [
-        <MainNav key="0" activeLink={this.openActiveLink.bind(this)} />,
-        <HeaderLarge key="1" />,
-        <SliderTop key="2" />,
-        <Manifesto key="3" />,
-        <CTA key="4" />,
-        <Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />      ,
-        <Footer key="6" />
+        <MainNav key="0"/>,
+        <Footer key="6"/>,
 			]
 		}
   }
-  openActiveLink(activeLink) {
-    this.setState({components:[
-      <MainNav key="0" activeLink={this.openActiveLink.bind(this)} />
-    ]})
-  }
-
-	showAllPics(allPics) {
-		this.setState({components:[
-				<HeaderLarge key="1" />,
-				<Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />,
-				<Footer key="6" />
-		]})
-	}
+  // openActiveLink(activeLink) {
+  //   this.setState({components:[
+  //     <MainNav key="0" activeLink={this.openActiveLink.bind(this)} />
+  //   ]})
+  // }
+  //
+	// showAllPics(allPics) {
+	// 	this.setState({components:[
+	// 			<HeaderLarge key="1" />,
+	// 			<Slider allPics={this.showAllPics.bind(this)} images={imgsObj.imgs} key="5" />,
+	// 			<Footer key="6" />
+	// 	]})
+	// }
 
   render() {
 
