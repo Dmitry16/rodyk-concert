@@ -11,14 +11,14 @@ h1.site-title {
   text-align: center;
   padding: 0;
 }
-.icon, .header-logo-title, .icons-wrapper.album-fotos,
+.icon, .header-logo-title,
 .all_pics_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.all_pics {
+.all_pics, .icons-wrapper.album-fotos {
   display: flex;
   flex-wrap: wrap;
 }

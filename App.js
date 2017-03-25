@@ -37,23 +37,15 @@ class App extends React.Component {
     ]})
   }
 
-	// showPics(allPics) {
-	// 	this.setState({components:[
-	// 			// <HeaderLarge key="0" />,
-  //       // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
-	// 			// <Footer key="6" />
-	// 	]})
-	// }
+  showAllPics() {
+    console.log('kuku');
+  }
+
+
 
   render() {
 
-    return (
 
-        <div>
-          {this.state.components}
-        </div>
-
-    )
   }
 }
 

@@ -18,23 +18,48 @@ import MainNav from "./components/nav";
 import AllPics from "./components/allpics";
 
 
+const cb = (zz) => {
+  console.log(zz);
+}
+
+const renderCTA = () => {
+  return (
+    <CTA callback={cb}/>
+  )
+}
+
+const showAllPics = (pics) => {
+  console.log(pics);
+  if (pics)
+    console.log(pics);
+  // renderAllPics(pics)
+}
+
+const renderSlider = () => {
+  return (
+    <Slider showPics={ showAllPics } />
+  )
+}
+
+const renderAllPics = (pics) => {
+  return (
+    <AllPics pics={ pics } showAllPics={ showAllPics } />
+  )
+}
 
 render ((
 
 <Router>
   <div>
 
-    <App />
-
     <Route path="/" component={HeaderLarge}/>
     <Route path="/" component={MainNav}/>
     <Route exact={true} path="/" component={SliderTop}/>
     <Route exact={true} path="/" component={Manifesto}/>
-    <Route exact={true} path="/" component={CTA}/>
-    <Route exact={true} path="/" component={Slider}/>
-    <Route path="/fotos" component={AllPics}/>
+    <Route exact={true} path="/" render={renderCTA}/>
+    <Route exact={true} path="/" render={renderSlider}/>
+    <Route path="/fotos" render={renderAllPics}/>
     <Route path="/" component={Footer}/>
-
 
   </div>
 </Router>

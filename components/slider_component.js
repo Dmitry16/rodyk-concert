@@ -1,27 +1,3 @@
-const imgsObj = {
-  imgs : [
-    {
-      src: './assets/img/album/7.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-    {
-      src: './assets/img/album/8.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-    {
-      src: './assets/img/album/9.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-		{
-      src: './assets/img/album/17.jpeg',
-      alt: 'jojo',
-      class: 'front-pics'
-    },
-  ]
-}
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -37,7 +13,7 @@ class Slider extends React.Component {
   }
 
 componentWillMount() {
-  fetch('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media')
+  fetch('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media?per_page=20')
   .then(res => res.json())
   .then(resData => {
     this.setState({ pics : resData });
@@ -48,27 +24,30 @@ componentWillMount() {
 //   this.props.showPics(this.state.pics);
 // }
 
-  render() {
+showAllPics() {
+  this.props.showPics(this.state.pics);
+}
 
-          //console.log(this.state.pics);
+  render() {
 
     let pics = this.state.pics.map((pic, id) => {
       return (
         <div key={pic.id} className="img sm">
           <img src={pic.source_url} alt={pic.alt_text} />
+          <p>id: {pic.id}</p>
         </div>
       )
     });
-            //console.log(pics);
 
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
           {pics}
         <section className="button-more-section">
-        <Link to="/fotos" className="button-more"
-          >
-          Ver todas fotos
+        <Link to="/fotos" className="button-more">
+          <button className="cta-button" onClick={this.showAllPics.bind(this)}>
+            Ver todas fotos
+          </button>
         </Link>
         </section>
 
