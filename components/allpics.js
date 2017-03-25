@@ -1,43 +1,20 @@
-const imgs = [
-  {
-    src: './assets/img/album/3.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-  {
-    src: './assets/img/album/5.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-  {
-    src: './assets/img/album/7.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-  {
-    src: './assets/img/album/9.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-  {
-    src: './assets/img/album/15.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-  {
-    src: './assets/img/album/16.jpeg',
-    alt: 'jojo',
-    className: 'front-pics'
-  },
-];
 
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
 
 export default class AllPics extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {pics: []}
+  }
+
+  showPics(allPics) {
+    this.setState({components:[
+        // <HeaderLarge key="0" />,
+        // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
+        // <Footer key="6" />
+    ]})
   }
 
   render() {

@@ -37,13 +37,13 @@ class App extends React.Component {
     ]})
   }
 
-	showAllPics(allPics) {
-		this.setState({components:[
-				// <HeaderLarge key="0" />,
-        // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
-				// <Footer key="6" />
-		]})
-	}
+	// showPics(allPics) {
+	// 	this.setState({components:[
+	// 			// <HeaderLarge key="0" />,
+  //       // <MainNav key="1" activeLink={this.openActiveLink.bind(this)}/>,
+	// 			// <Footer key="6" />
+	// 	]})
+	// }
 
   render() {
 

@@ -33,32 +33,41 @@ import AllPics from "./allpics";
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {allPics: this.props.allPics}
+    this.state = {pics: []}
   }
-  // showAllPics() {
-  //   // console.log(match.url);
-  //   this.setState({allPics:true},function(){
-  //     this.props.allPics(this.state.allPics);
-  //   });
-  // }
 
-  // <div className="icons-wrapper fotos">
-  //   {imgsObj.imgs(function (img,index) {
-  //     return (
-  //       <div key={index} className="img sm">
-  //         <img src={img.src} alt={img.alt} className={img.class} />
-  //       </div>
-  //     )
-  //   })}
-  // </div>
+componentWillMount() {
+  fetch('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media')
+  .then(res => res.json())
+  .then(resData => {
+    this.setState({ pics : resData });
+  });
+}
+
+// showAllPics() {
+//   this.props.showPics(this.state.pics);
+// }
 
   render() {
+
+          //console.log(this.state.pics);
+
+    let pics = this.state.pics.map((pic, id) => {
+      return (
+        <div key={pic.id} className="img sm">
+          <img src={pic.source_url} alt={pic.alt_text} />
+        </div>
+      )
+    });
+            //console.log(pics);
+
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
-
+          {pics}
         <section className="button-more-section">
-        <Link to="/fotos" className="button-more">
+        <Link to="/fotos" className="button-more"
+          >
           Ver todas fotos
         </Link>
         </section>
