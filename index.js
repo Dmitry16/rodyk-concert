@@ -1,15 +1,19 @@
 // Libs
 import React from 'react';
 import { render } from 'react-dom';
-//import { Router, Route, etc.} from 'react-router';
-import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
-// css
-require ('./production/css/newstyle.css');
-
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import PicsReducer from './src/reducers/pics';
 import App from "./App";
 
-render ((
+const store = createStore(
+  PicsReducer,
+  window.devToolsExtension && window.devToolsExtension()
+);
 
+render ((
+  <Provider>
     <App />
+  </Provider>
 
 ), document.getElementById("zz"));

@@ -2,8 +2,8 @@
 // Libs
 import React from "react";
 import ReactDOM from "react-dom";
-  import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
-// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
+
 // Components
 import HeaderLarge from "./components/header";
 import Manifesto from "./components/manifesto";
