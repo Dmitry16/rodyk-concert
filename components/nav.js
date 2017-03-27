@@ -38,7 +38,7 @@ export default class MainNav extends React.Component {
             <Link to='/fotos'>Fotos</Link>
           </li>
           <li>
-            <Link to='/header'>Blog</Link>
+            <Link to='/blog'>Blog</Link>
           </li>
           <li>
             <Link to='/fotos'>Contacto</Link>

@@ -34,7 +34,6 @@ showAllPics() {
       return (
         <div key={pic.id} className="img sm">
           <img src={pic.source_url} alt={pic.alt_text} />
-          <p>id: {pic.id}</p>
         </div>
       )
     });

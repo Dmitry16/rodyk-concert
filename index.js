@@ -16,6 +16,8 @@ import Modal from "./components/modal";
 import SliderTop from "./components/slider-top";
 import MainNav from "./components/nav";
 import AllPics from "./components/allpics";
+import Blog from "./components/blog";
+import Article from "./components/article";
 
 
 const cb = (zz) => {
@@ -58,6 +60,8 @@ render ((
     <Route exact={true} path="/" component={Manifesto}/>
     <Route exact={true} path="/" render={renderCTA}/>
     <Route exact={true} path="/" render={renderSlider}/>
+    <Route exact={true} path="/" component={Blog}/>
+    <Route path="/blog" component={Blog}/>
     <Route path="/fotos" render={renderAllPics}/>
     <Route path="/" component={Footer}/>
 
