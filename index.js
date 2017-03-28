@@ -2,17 +2,12 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import PicsReducer from './src/reducers/pics';
-import App from "./App";
 
-const store = createStore(
-  PicsReducer,
-  window.devToolsExtension && window.devToolsExtension()
-);
+import App from './App';
+import Store from './Store';
 
 render ((
-  <Provider>
+  <Provider store={Store}>
     <App />
   </Provider>
 

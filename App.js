@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
+import { connect } from "react-redux";
 
 // Components
 import HeaderLarge from "./components/header";
@@ -19,7 +20,13 @@ import Article from "./components/article";
 // css
 require ('./production/css/newstyle.css');
 
-class App extends React.Component {
+connect((store) => {
+  return {
+    pics: store.pics
+  }
+})
+
+export default class App extends React.Component {
   constructor() {
     super();
   }
@@ -28,11 +35,11 @@ class App extends React.Component {
     console.log(zz);
   };
 
-  showAllPics = (pics) => {
-    console.log(pics);
-    if (pics)
-    console.log(pics);
-    renderAllPics(pics)
+  showAllPics = () => {
+    console.log(this.props.pics);
+    if (this.props.pics)
+    // console.log(pics);
+    this.renderAllPics(this.props.pics);
   };
 
   renderSlider = () => {
@@ -48,6 +55,8 @@ class App extends React.Component {
   };
 
   render() {
+
+    console.log(this.props);
 
     return (
       <Router>
@@ -69,5 +78,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;

@@ -3,22 +3,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { fetchPics } from '../src/actions/picsActions';
 
 import AllPics from "./allpics";
 
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {pics: []}
+
   }
 
-componentWillMount() {
-  fetch('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media?per_page=20')
-  .then(res => res.json())
-  .then(resData => {
-    this.setState({ pics : resData });
-  });
-}
+// componentWillMount() {
+//   dispatch(fetchPics())
+// }
 
 // showAllPics() {
 //   this.props.showPics(this.state.pics);
@@ -30,18 +27,18 @@ showAllPics() {
 
   render() {
 
-    let pics = this.state.pics.map((pic, id) => {
-      return (
-        <div key={pic.id} className="img sm">
-          <img src={pic.source_url} alt={pic.alt_text} />
-        </div>
-      )
-    });
+    // let pics = this.props.pics.map((pic, id) => {
+    //   return (
+    //     <div key={pic.id} className="img sm">
+    //       <img src={pic.source_url} alt={pic.alt_text} />
+    //     </div>
+    //   )
+    // });
 
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
-          {pics}
+
         <section className="button-more-section">
         <Link to="/fotos" className="button-more">
           <button className="cta-button" onClick={this.showAllPics.bind(this)}>
