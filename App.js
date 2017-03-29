@@ -20,15 +20,16 @@ import Article from "./components/article";
 // css
 require ('./production/css/newstyle.css');
 
-connect((store) => {
+@connect((store) => {
   return {
-    pics: store.pics
-  }
+    user: store.name,
+    friends: store.friends
+  };
 })
 
 export default class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   cb = (zz) => {
@@ -56,7 +57,8 @@ export default class App extends React.Component {
 
   render() {
 
-    console.log(this.props);
+    console.log(this.props.user);
+    console.log(this.props.friends[0]);
 
     return (
       <Router>

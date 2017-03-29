@@ -10,3 +10,10 @@ export function fetchPics() {
     })
   }
 }
+export const FETCH_USER = './src/actions/FETCH_USER';
+
+export function fetchUser() {
+  return {
+    type: FETCH_USER
+  }
+}
