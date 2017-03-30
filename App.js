@@ -25,7 +25,7 @@ require ('./production/css/newstyle.css');
 
 @connect((store) => {
   return {
-    // tweets: store.pics
+    pics: store.pics
   };
 })
 
@@ -37,7 +37,7 @@ export default class App extends React.Component {
 
   componentDidMount() {
     // this.fetchPics().bind(this)
-    // console.log("zhuzha");
+    // console.log(this.props.pics);
   }
 
   cb = (zz) => {
@@ -53,7 +53,7 @@ export default class App extends React.Component {
 
   renderSlider = () => {
     return (
-      <Slider showPics={ this.showAllPics.bind(this) } />
+      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.pics}/>
     )
   };
 

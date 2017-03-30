@@ -17,28 +17,24 @@ export default class Slider extends React.Component {
 //   this.props.dispatch(fetchPics())
 // }
 
-// showAllPics() {
-//   this.props.showPics(this.state.pics);
-// }
-
 showAllPics() {
-  this.props.showPics(this.state.pics);
+  this.props.showAllPics();
 }
 
   render() {
 
-    // let pics = this.props.pics.map((pic, id) => {
-    //   return (
-    //     <div key={pic.id} className="img sm">
-    //       <img src={pic.source_url} alt={pic.alt_text} />
-    //     </div>
-    //   )
-    // });
+    let pics = this.props.pics.map((pic, id) => {
+      return (
+        <div key={pic.id} className="img sm">
+          <img src={pic.source_url} alt={pic.alt_text} />
+        </div>
+      )
+    });
 
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
-
+        { pics }
         <section className="button-more-section">
         <Link to="/fotos" className="button-more">
           <button className="cta-button" onClick={this.showAllPics.bind(this)}>
