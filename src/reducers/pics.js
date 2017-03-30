@@ -6,18 +6,18 @@ export default function reducer(state={
   }, action) {
 
     switch (action.type) {
-      case "FETCH_PICS_START": {
+      case "FETCH_PICS_PENDING": {
         return {...state, fetching: true}
       }
-      case "FETCH_PICS_ERROR": {
+      case "FETCH_PICS_REJECTED": {
         return {...state, fetching: false, error: action.payload}
       }
-      case "RECIEVE_PICS": {
+      case "FETCH_PICS_FULFILLED": {
         return {
           ...state,
           fetching: false,
           fetched: true,
-          pics: action.payload,
+          pics: action.payload.data,
         }
       }
     }
