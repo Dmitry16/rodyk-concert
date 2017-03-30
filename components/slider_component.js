@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { fetchPics } from '../src/actions/picsActions';
+import { fetchAllPics } from '../src/actions/picsActions';
 
 import AllPics from "./allpics";
 
@@ -18,7 +18,8 @@ export default class Slider extends React.Component {
 // }
 
 showAllPics() {
-  this.props.showAllPics();
+  this.props.dispatch(fetchAllPics());
+  // console.log(this.props);
 }
 
   render() {

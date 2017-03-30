@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react
 export default class AllPics extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { pics: []}
   }
 
   // showPics() {
@@ -23,21 +22,21 @@ export default class AllPics extends React.Component {
   // }
 
   render() {
-    // let pics = this.state.pics.map((pic,id)=> {
-    //   return (
-    //     <div key={pic.id} className="img sm">
-    //       <img src={pic.src} alt={pic.alt} className={pic.className} />
-    //     </div>
-    //   )
-    // });
+    let pics = this.props.pics.map((pic, id) => {
+      return (
+        <div key={pic.id} className="img sm">
+          <img src={pic.source_url} alt={pic.alt_text} />
+        </div>
+      )
+    });
 
-    //console.log(this.state.pics);
+    console.log(this.props.pics);
 
     return (
       <div className="all_pics_section">
         <h3 className="title-front">Album de Fotos</h3>
         <div className="all_pics">
-
+          { pics }
         </div>
       </div>
     )

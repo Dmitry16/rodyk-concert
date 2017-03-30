@@ -18,7 +18,7 @@ import AllPics from "./components/allpics";
 import Blog from "./components/blog";
 import Article from "./components/article";
 
-// import { fetchPics } from './src/actions/picsActions';
+import { fetchPics } from './src/actions/picsActions';
 // css
 // require ('./production/css/main.min.css');
 require ('./production/css/newstyle.css');
@@ -34,10 +34,9 @@ export default class App extends React.Component {
     super(props);
   }
 
-
-  componentDidMount() {
-    // this.fetchPics().bind(this)
-    // console.log(this.props.pics);
+  componentWillMount() {
+    this.props.dispatch(fetchPics());
+    // console.log(this.props);
   }
 
   cb = (zz) => {
@@ -53,13 +52,15 @@ export default class App extends React.Component {
 
   renderSlider = () => {
     return (
-      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.pics}/>
+      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.pics}
+      dispatch={ this.props.dispatch }/>
     )
   };
 
-  renderAllPics = (pics) => {
+  renderAllPics = () => {
     return (
-      <AllPics pics={ pics } showAllPics={ this.showAllPics.bind(this) } />
+      <AllPics pics={ this.props.pics }
+       />
     )
   };
 
