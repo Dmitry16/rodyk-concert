@@ -20,11 +20,12 @@ import Article from "./components/article";
 
 // import { fetchPics } from './src/actions/picsActions';
 // css
+// require ('./production/css/main.min.css');
 require ('./production/css/newstyle.css');
 
 @connect((store) => {
   return {
-    pics: store.pics
+    // tweets: store.pics
   };
 })
 
@@ -33,22 +34,9 @@ export default class App extends React.Component {
     super(props);
   }
 
-  fetchPics() {
-      fetch('http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media?per_page=10&repeat=w3tc')
-      .then(res => res.json())
-      .then(resData => {
-        // dispatch({ type: "FETCH_PICS_FULFILLED", payload: resData.data });
-        console.log(resData);
-      })
-      .catch((err) => {
-        // dispatch({type: "FETCH_PICS_REJECTED", payload: err})
-        console.log(err);
-      });
-    }
-
 
   componentDidMount() {
-    this.fetchPics().bind(this)
+    // this.fetchPics().bind(this)
     // console.log("zhuzha");
   }
 
