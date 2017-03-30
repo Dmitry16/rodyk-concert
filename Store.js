@@ -11,7 +11,7 @@ const middleware = applyMiddleware(promise(), thunk, createLogger);
 
 const store = createStore(reducer, middleware);
 
-// fetchPics();
+store.dispatch(fetchPics());
 
 // store.dispatch((dispatch) => {
 //   dispatch({type: "FETCH_PICS_START"});
@@ -23,10 +23,10 @@ const store = createStore(reducer, middleware);
 //       dispatch({type: "FETCH_PICS_ERROR", payload: err});
 //     })
 // });
-//dispatch with promise()
-store.dispatch({
-  type: "FETCH_PICS",
-  payload: axios.get("http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media?per_page=10&repeat=w3tc")
-})
+// dispatch with promise()
+// store.dispatch({
+//   type: "FETCH_PICS",
+//   payload: axios.get("http://receptum-in-natura.solutecs.biz/wp-json/wp/v2/media?per_page=10&repeat=w3tc")
+// })
 
 export default store;
