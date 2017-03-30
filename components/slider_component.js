@@ -7,14 +7,14 @@ import { fetchPics } from '../src/actions/picsActions';
 
 import AllPics from "./allpics";
 
-class Slider extends React.Component {
+export default class Slider extends React.Component {
   constructor(props) {
     super(props);
 
   }
 
 // componentWillMount() {
-//   dispatch(fetchPics())
+//   this.props.dispatch(fetchPics())
 // }
 
 // showAllPics() {
@@ -133,5 +133,3 @@ document.addEventListener('click', function(e) {
     }
   }
 });
-
-export default Slider;

@@ -9,6 +9,7 @@
     "start": "webpack-dev-server --progress --inline --hot"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "file-loader": "^0.10.1",
     "html-loader": "^0.4.5",
     "react": "^15.4.2",
