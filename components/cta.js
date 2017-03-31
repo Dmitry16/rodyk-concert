@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class CTA extends React.Component {
+import styled from "styled-components";
+import { LT, MT, ST } from './styled/titles';
+import { Button } from './styled/buttons';
+
+export default class CTA extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -12,22 +16,22 @@ callBack() {
 
   render() {
     const styleObj = {
-    background: "darkkhaki",
+    background: "palevioletred",
     color: "darkred",
     textAlign: "center",
     }
     return (
       <div style={styleObj} className="cta">
-        <h3>Que te apetece hacer?</h3>
+        <LT>Que te apetece hacer?</LT>
         <div className="cta-buttons-wrapper">
-          <button className="cta-button">Conocer quien somos</button>
-          <button className="cta-button">Saber que ofrecemos</button>
-          <Link to="/fotos"><button className="cta-button" onClick={this.callBack.bind(this)}>
-            Ver las fotos</button></Link>
+          <Link to="/fotos"><Button small className="cta-button">
+          Conocer quien somos</Button></Link>
+          <Link to="/fotos"><Button small className="cta-button">
+          Saber que ofrecemos</Button></Link>
+          <Link to="/fotos"><Button small className="cta-button" onClick={this.callBack.bind(this)}>
+            Ver las fotos</Button></Link>
         </div>
       </div>
     );
   }
 }
-
-export default CTA;

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 import { fetchAllPics } from '../src/actions/picsActions';
 
 import AllPics from "./allpics";
@@ -13,23 +14,21 @@ export default class Slider extends React.Component {
 
   }
 
-// componentWillMount() {
-//   this.props.dispatch(fetchPics())
-// }
-
 showAllPics() {
   this.props.dispatch(fetchAllPics());
-  // console.log(this.props);
 }
 
   render() {
 
-    let pics = this.props.pics.map((pic, id) => {
-      return (
-        <div key={pic.id} className="img sm">
-          <img src={pic.source_url} alt={pic.alt_text} />
-        </div>
-      )
+      let pics = this.props.pics.map((pic, id) => {
+
+          return (
+            <div key={pic.id} className="img sm">
+              <img src={pic.source_url} alt={pic.alt_text} />
+              {pic.source_url}
+            </div>
+          )
+
     });
 
     return (

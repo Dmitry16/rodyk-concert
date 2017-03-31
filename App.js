@@ -4,6 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom';
 import { connect } from "react-redux";
+import styled from "styled-components";
 
 // Components
 import HeaderLarge from "./components/header";
@@ -18,13 +19,15 @@ import AllPics from "./components/allpics";
 import Blog from "./components/blog";
 import Article from "./components/article";
 
-import { fetchPics } from './src/actions/picsActions';
+// import { fetchPics } from './src/actions/picsActions';
 // css
 // require ('./production/css/main.min.css');
 require ('./production/css/newstyle.css');
+import * as titles from './components/styled/titles'
 
 @connect((store) => {
   return {
+    initialPics: store.initialPics,
     pics: store.pics
   };
 })
@@ -35,7 +38,7 @@ export default class App extends React.Component {
   }
 
   componentWillMount() {
-    this.props.dispatch(fetchPics());
+    // this.props.dispatch(fetchPics());
     // console.log(this.props);
   }
 
@@ -52,14 +55,14 @@ export default class App extends React.Component {
 
   renderSlider = () => {
     return (
-      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.pics}
+      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.initialPics}
       dispatch={ this.props.dispatch }/>
     )
   };
 
   renderAllPics = () => {
     return (
-      <AllPics pics={ this.props.pics }
+      <AllPics pics={ this.props.pics } initialPics={ this.props.initialPics }
        />
     )
   };

@@ -8,26 +8,14 @@ export default class AllPics extends React.Component {
     super(props);
   }
 
-  // showPics() {
-  //   this.setState({ pics: allPics })
-  //   }
-  // }
-
-  // renderAllPics() {
-  //   return (
-  //     <AllPics
-  //       showPics={this.showAllPics.bind(this)}
-  //     />
-  //   )
-  // }
-
   render() {
     let pics = this.props.pics.map((pic, id) => {
       return (
         <div key={pic.id} className="img sm">
           <img src={pic.source_url} alt={pic.alt_text} />
+          {pic.source_url}
         </div>
-      )
+      )  
     });
 
     console.log(this.props.pics);
