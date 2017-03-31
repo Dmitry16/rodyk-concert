@@ -1,17 +1,19 @@
-import React from "react";
-
-import Article from "./article";
+import React from "react"
+import Article from "./article"
+import styled from "styled-components"
+import { Box } from './styled/boxes' 
 
 export default class Blog extends React.Component {
   constructor() {
-    super();
+    super()
   }
 
   render() {
+
     return (
-      <div className="blog">
+      <Box className="blog">
         <Article />
-      </div>
+      </Box>
     )
   }
 }
