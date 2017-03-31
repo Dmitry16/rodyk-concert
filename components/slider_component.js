@@ -3,10 +3,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+//Actions
 import { fetchAllPics } from '../src/actions/picsActions';
-
+//Components
 import AllPics from "./allpics";
+//Styled componentsimport styled from "styled-components";
+import { Title } from './styled/titles';
+import { Button } from './styled/buttons';
+import { Box } from './styled/boxes';
+import { Pic } from './styled/pics';
 
 export default class Slider extends React.Component {
   constructor(props) {
@@ -20,26 +25,25 @@ showAllPics() {
 
   render() {
 
-      let pics = this.props.pics.map((pic, id) => {
-
-          return (
-            <div key={pic.id} className="img sm">
-              <img src={pic.source_url} alt={pic.alt_text} />
-              {pic.source_url}
-            </div>
-          )
-
+    let pics = this.props.pics.map((pic, id) => {
+        return (
+          <Pic key={pic.id} className="img sm">
+            <img src={pic.source_url} alt={pic.alt_text} />
+            {pic.source_url}
+          </Pic>
+        )
     });
 
     return (
 
 	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
-        { pics }
+          { pics }
         <section className="button-more-section">
         <Link to="/fotos" className="button-more">
-          <button className="cta-button" onClick={this.showAllPics.bind(this)}>
+          <Button className="cta-button" 
+          onClick={this.showAllPics.bind(this)}>
             Ver todas fotos
-          </button>
+          </Button>
         </Link>
         </section>
 

@@ -17,7 +17,7 @@ import AllPics from "./components/allpics"
 import Blog from "./components/blog"
 import Article from "./components/article"
 // css
-// require ('./production/css/main.min.css')
+require ('./assets/sass/main.scss')
 require ('./production/css/newstyle.css')
 //Styled components
 import { Container_main } from './components/styled/containers'

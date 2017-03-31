@@ -24,3 +24,17 @@ export const BoxTruncd = styled.div`
   ${ truncate('500px') }
   background: papayawhip;
 `
+export const BoxCTA = styled.div`
+  ${ media.handheld`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    `};
+  ${ media.tablet`
+    width: 70%;
+    `};
+  ${ media.desktop`
+    width: 100%;
+    `};
+`

@@ -42,16 +42,16 @@ ul.offer-text, ul.porque {
 ul.porque li::before {
 content: "\f006";
 }
-#{$all-buttons} {
-	background-color: $c10;
-	color: $c11;
-	border: 2px solid $c12;
-	//@include button(shiny, $c10);
-}
-#{$all-buttons-focus},
-#{$all-buttons-hover} {
-  background-color: coral;
-}
-#{$all-buttons-active} {
-  background-color: #00f;
-}
+// #{$all-buttons} {
+// 	background-color: $c10;
+// 	color: $c11;
+// 	border: 2px solid $c12;
+// 	//@include button(shiny, $c10);
+// }
+// #{$all-buttons-focus},
+// #{$all-buttons-hover} {
+//   background-color: coral;
+// }
+// #{$all-buttons-active} {
+//   background-color: #00f;
+// }

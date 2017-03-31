@@ -21,6 +21,7 @@ h1.site-title {
 .all_pics, .icons-wrapper.album-fotos, .blog {
   display: flex;
   flex-wrap: wrap;
+  padding: 3%;
 }
 .all_pics_section {
   margin: 5% 0;
@@ -29,6 +30,20 @@ h1.site-title {
   margin: 0 0 5% 0;
 }
 .article {
-  border: 1px solid pink;
-  background: "papayawhip";
+  border: 1px solid palevioletred;
+  background: papayawhip;
+}
+.cta {
+  width: 90%;
+  margin: 0 5% 7%;
+}
+.cta-button {
+  font-weight: 100;
+  background: darkkhaki;
+  margin-top: 5%;
+}
+.cta-button:hover {
+  background: lightgreen;
+  color: red;
+  box-shadow: 5px 5px 20px rgba(#000,0.7);
 }
