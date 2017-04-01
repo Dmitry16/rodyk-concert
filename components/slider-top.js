@@ -1,15 +1,21 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components';
 
 class SliderTop extends React.Component {
+
 	render() {
+
+			const Img = styled.img`
+				width: 100%;
+			`
 		return (
 			<div id="slider" className="hero">
-				<img src='./assets/img/album/17.jpeg' alt='xxx' className="slider-img in" />
-				<img src='./assets/img/album/13.jpeg' alt='xxx' className="slider-img out" />
-				<img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />
-				<img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
+				<Img src='./assets/img/album/17.jpeg' alt='xxx' className="slider-img in" />
+				<Img src='./assets/img/album/13.jpeg' alt='xxx' className="slider-img out" />
+				<Img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />
+				<Img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
 			</div>
-		);
+		)
 	}
 }
 

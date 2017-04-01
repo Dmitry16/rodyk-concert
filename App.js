@@ -17,10 +17,10 @@ import AllPics from "./components/allpics"
 import Blog from "./components/blog"
 import Article from "./components/article"
 // css
-require ('./assets/sass/main.scss')
-require ('./production/css/newstyle.css')
+import styles from './production/css/newstyle.css'
 //Styled components
 import { Container_main } from './components/styled/containers'
+import { WrapperMax1100 } from './components/styled/wrappers'
 
 @connect((store) => {
   return {
@@ -62,22 +62,21 @@ export default class App extends React.Component {
 
   render() {
 
-
     return (
       <Router>
         <Container_main>
-
           <Route path="/" component={HeaderLarge}/>
-          <Route path="/" component={MainNav}/>
-          <Route exact={true} path="/" component={SliderTop}/>
-          <Route exact={true} path="/" component={Manifesto}/>
-          <Route exact={true} path="/" component={CTA}/>
-          <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
-          <Route exact={true} path="/" component={Blog}/>
-          <Route path="/blog" component={Blog}/>
-          <Route path="/fotos" render={this.renderAllPics.bind(this)}/>
+          <WrapperMax1100>
+            <Route path="/" component={MainNav}/>
+            <Route exact={true} path="/" component={SliderTop}/>
+            <Route exact={true} path="/" component={Manifesto}/>
+            <Route exact={true} path="/" component={CTA}/>
+            <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
+            <Route exact={true} path="/" component={Blog}/>
+            <Route path="/blog" component={Blog}/>
+            <Route path="/fotos" render={this.renderAllPics.bind(this)}/>
+          </WrapperMax1100>
           <Route path="/" component={Footer}/>
-
         </Container_main>
       </Router>
     )

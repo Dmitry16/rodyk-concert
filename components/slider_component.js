@@ -8,10 +8,14 @@ import { fetchAllPics } from '../src/actions/picsActions';
 //Components
 import AllPics from "./allpics";
 //Styled componentsimport styled from "styled-components";
+import styled from "styled-components";
+import { buttons } from 'polished';
+
 import { Title } from './styled/titles';
 import { Button } from './styled/buttons';
 import { Box } from './styled/boxes';
 import { Pic } from './styled/pics';
+import { WrapperMax1100 } from './styled/wrappers'
 
 export default class Slider extends React.Component {
   constructor(props) {
@@ -32,22 +36,26 @@ showAllPics() {
             {pic.source_url}
           </Pic>
         )
-    });
+    })
 
+    const BTN_more = styled.section`
+      ${buttons('active')} {
+        border: none;
+      }
+    `
     return (
 
-	    <div id="wrapper-fotos" className="icons-wrapper album-fotos">
+	    <WrapperMax1100 id="wrapper-fotos" className="icons-wrapper album-fotos">
           { pics }
-        <section className="button-more-section">
+        <BTN_more className="button-more-section">
         <Link to="/fotos" className="button-more">
-          <Button className="cta-button" 
+          <Button className="cta-button"
           onClick={this.showAllPics.bind(this)}>
             Ver todas fotos
           </Button>
         </Link>
-        </section>
-
-      </div>
+        </BTN_more>
+      </WrapperMax1100>
     )
   }
 }

@@ -11,13 +11,9 @@ export default class CTA extends React.Component {
     super(props);
   }
 
-callBack() {
-  this.props.callback("kuku");
-}
-
   render() {
     const styleObj = {
-    background: "darkkhaki",
+    background: "mediumseagreen",
     textAlign: "center",
     }
     return (
@@ -28,7 +24,7 @@ callBack() {
           Conocer quien somos</Button></Link>
           <Link to="/fotos"><Button className="cta-button">
           Saber que ofrecemos</Button></Link>
-          <Link to="/fotos"><Button className="cta-button" onClick={this.callBack.bind(this)}>
+          <Link to="/fotos"><Button className="cta-button">
             Ver las fotos</Button></Link>
         </BoxCTA>
       </BoxCTA>
