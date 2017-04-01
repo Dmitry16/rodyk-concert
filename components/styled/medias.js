@@ -1,18 +1,23 @@
 import { css } from 'styled-components'
 
 export const media = {
+  tiny: (...args) => css`
+    @media (max-width: 235px) {
+      ${ css(...args) }
+    }
+  `,
   handheld: (...args) => css`
     @media (max-width: 500px) {
       ${ css(...args) }
     }
   `,
   tablet: (...args) => css`
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
       ${ css(...args) }
     }
   `,
   desktop: (...args) => css`
-    @media (max-width: 1400px) {
+    @media (max-width: 1500px) {
       ${ css(...args) }
     }
   `,

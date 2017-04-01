@@ -19,7 +19,7 @@ class HeaderLarge extends React.Component {
       background: #aee8a7;
       height: 14em;
       > p, h1 {
-        font-size: 4em; padding: 0; margin: 0;
+        font-size: 4em; padding: 0; margin: 0; color: coral;
       }
       ${ media.desktop`height: 12em;
         > p, h1 {
@@ -33,7 +33,10 @@ class HeaderLarge extends React.Component {
         > p, h1 {
           font-size: 1.5em; padding: 0; margin: 0;
         }`};
-
+      ${ media.tiny`height: 5em;
+        > h1 {
+          font-size: 1.3em; line-height: 1.3em; padding: 0; margin: 0;
+        }`};
     `
     return (
       <Wrapper>
