@@ -1,30 +1,32 @@
-import React from 'react';
+import React from 'react'
+import { H1, H3, Icon, P } from './styled/typographies'
 
-class Manifesto extends React.Component {
+export default class Manifesto extends React.Component {
   constructor() {
-    super();
+    super()
   }
 
   render() {
+
     return (
-      <div className="manifesto">
-        <div className="title-front">
-          <h3>Nuestro Manifesto</h3>
-        </div>
+      <div id="manifesto" className="manifesto">
+
+        <H1>Nuestro Manifesto</H1>
 
         <div className="icons-wrapper">
-          <a href="#categorias">
+          <a href="#manifesto">
             <div className="icon">
-                <p className="icon-eye"></p>
-                <h3 className="icon_title">Luminatium perdurantium!</h3>
-                <p className="quien-somos">Lorem ipsum dolor sit amet Luminatium! consectetur
+                <Icon className="icon-eye"></Icon>
+                <H3 className="icon_title">Luminatium perdurantium!</H3>
+                <P className="quien-somos">Lorem ipsum dolor sit amet Luminatium! consectetur
                   adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
                   cillum dolore eu fugiat nulla pariatur.
                   Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.</p>
+                  officia deserunt mollit anim id est laborum.
+                </P>
             </div>
           </a>
         </div>
@@ -32,4 +34,3 @@ class Manifesto extends React.Component {
     )
   }
 }
-export default Manifesto;

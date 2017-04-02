@@ -16,11 +16,12 @@ class HeaderLarge extends React.Component {
       width: 100%;
       padding: 2%;
       max-width: 100%;
-      background: #aee8a7;
+      background: ${ props => props.theme.headerBG || 'mediumseagreen' }
       height: 14em;
       > p, h1 {
-        font-size: 4em; padding: 0; margin: 0; color: coral;
-      }
+        font-size: 4em; padding: 0; margin: 0;
+        color: ${ props => props.theme.headerTextColor || 'coral' }
+        }
       ${ media.desktop`height: 12em;
         > p, h1 {
           font-size: 4em; padding: 0; margin: 0;
@@ -31,11 +32,11 @@ class HeaderLarge extends React.Component {
         }`};
       ${ media.handheld`height: 5em;
         > p, h1 {
-          font-size: 1.5em; padding: 0; margin: 0;
+          font-size: 1.7em; padding: 0; margin: 0;
         }`};
       ${ media.tiny`height: 5em;
         > h1 {
-          font-size: 1.3em; line-height: 1.3em; padding: 0; margin: 0;
+          font-size: 1.3em; line-height: 1.2em; padding-top: 0; margin: 0;
         }`};
     `
     return (

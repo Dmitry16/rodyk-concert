@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 
 export const media = {
   tiny: (...args) => css`
-    @media (max-width: 235px) {
+    @media (max-width: 260px) {
       ${ css(...args) }
     }
   `,

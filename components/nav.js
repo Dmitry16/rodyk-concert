@@ -24,20 +24,21 @@ export default class MainNav extends React.Component {
       background: steelblue;
       margin: 0;
       > ul {
-        ${ flex.row };
-        font-size: 1.3em;
+        font-size: 1.2em;
         text-align: center;
         list-style: none;
         margin: 0;
         padding: 0;
         > span { display: none }
-        > li { width: 15%; padding: 1% 0;
-          > a { color: coral; }
-         }
-        > li:hover { background: coral;
-          > a { color: steelblue; }
+        > div { ${ flex.row }
+          > li { width: 15%; padding: 0.2em 0;
+              > a { color: coral; }
+            &:hover { background: coral;
+              > a { color: steelblue; }
+            }
           }
         }
+      }
       ${ media.desktop`
         > ul {
           font-size: 1.2em;
@@ -47,50 +48,50 @@ export default class MainNav extends React.Component {
           font-size: 1em;
         }`};
       ${ media.handheld`
-        > ul {
-          ${ flex.column }
-          position: relative;
-          > div { height: 0; opacity: 0; }
+        > ul { position: relative;
+          > div { ${ flex.column }
+              height: 0; opacity: 0; }
           > span { ${ flex.row }
-            font-size: 1em;
-            color: coral; padding: 3px 0;
-            cursor: pointer;
+              font-size: 1em;
+              color: coral; padding: 3px 0;
+              cursor: pointer;
             }
           &:hover > div { position: absolute;
-                    top: 1.1em; z-index: 3;
-                    height: 7em; opacity: 0.9;
-                    background: steelblue;
-                    padding: 1em;
-                    transition: all 0.5s;
-                    > li > a { color: coral; display: block; width: 100%;
-                              &:hover { background: coral; color: steelblue; }
-                            }
+                      align-content: space-between;
+                      top: 1.1em; left: 34%; z-index: 3;
+                      height: 8em; opacity: 0.9;
+                      background: steelblue;
+                      padding: 1em;
+                      transition: all 0.5s;
+                    > li { display: block; width: 100%;
+                      > a { color: coral; text-align: left;
+                        &:hover { background: coral; color: steelblue; }
+                    }
                    }
           }
       `};
     `
-
     return (
       <Wrapper>
           <ul>
           <span className="icon-bars"
           onClick={this.showMenu.bind(this)}></span>
           <div className="list">
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/about'>Manifesto</Link>
-            </li>
-            <li>
-              <Link to='/fotos'>Fotos</Link>
-            </li>
-            <li>
-              <Link to='/blog'>Blog</Link>
-            </li>
-            <li>
-              <Link to='/fotos'>Contacto</Link>
-            </li>
+              <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/about'>Manifesto</Link>
+              </li>
+              <li>
+                <Link to='/fotos'>Fotos</Link>
+              </li>
+              <li>
+                <Link to='/blog'>Blog</Link>
+              </li>
+              <li>
+                <Link to='/fotos'>Contacto</Link>
+              </li>
           </div>
         </ul>
       </Wrapper>
