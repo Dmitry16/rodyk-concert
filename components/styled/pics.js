@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { media } from './medias'
 
-export const Pic = styled.div`
+export const PicWrapper = styled.div`
     width: 32%;
     margin: 0.4em;
   ${ media.wide`
@@ -14,6 +14,7 @@ export const Pic = styled.div`
   ` };
   ${ media.tablet`
     width: 32%;
+
     margin: 0.2em;
   ` };
   ${ media.handheld`

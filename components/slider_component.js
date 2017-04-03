@@ -14,7 +14,7 @@ import { buttons } from 'polished';
 import { Title } from './styled/titles';
 import { Button } from './styled/buttons';
 import { Box } from './styled/boxes';
-import { Pic } from './styled/pics';
+import { PicWrapper } from './styled/pics';
 import { Section } from './styled/wrappers'
 
 export default class Slider extends React.Component {
@@ -29,18 +29,23 @@ showAllPics() {
 
   render() {
 
-    let pics = this.props.pics.map((pic, id) => {
-        return (
-          <Pic key={pic.id} className="img sm">
-            <img src={pic.source_url} alt={pic.alt_text} />
-            {pic.source_url}
-          </Pic>
-        )
-    })
-
     const Wrapper = styled.div`
           > a { margin: 5%; }
     `
+    const Img = styled.img`
+          max-width: 100%;
+          max-height: 100%;
+    `
+
+    let pics = this.props.pics.map((pic, id) => {
+        return (
+          <PicWrapper key={pic.id}>
+            <Img src={pic.source_url} alt={pic.alt_text} />
+          </PicWrapper>
+        )
+    })
+
+
     return (
       <Section>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
