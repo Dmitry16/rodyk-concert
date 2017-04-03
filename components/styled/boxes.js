@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { media } from './medias'
+import { flex } from './flexes'
 import { truncate } from './utiles'
 
 export const Box = styled.div`
@@ -7,17 +8,17 @@ export const Box = styled.div`
   ${ media.desktop`
     font-size: 16px;
     padding: 1.2em;
-    margin: 7px 0;
+    margin: 0 0;
   ` };
   ${ media.tablet`
     font-size: 14px;
     padding: 1em;
-    margin: 5px 0;
+    margin: 0 0;
   ` };
   ${ media.handheld`
     font-size: 12px;
     padding: 0.5em;
-    margin: 3px 0;
+    margin: 0 0;
   ` }
 `
 export const BoxTruncd = styled.div`
@@ -25,6 +26,9 @@ export const BoxTruncd = styled.div`
   background: papayawhip;
 `
 export const BoxCTA = styled.div`
+  background: mediumseagreen;
+  text-align: center;
+  margin: 0 0 2% 0;
   ${ media.handheld`
     width: 100%;
     display: flex;

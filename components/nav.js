@@ -11,7 +11,6 @@ import { flex } from './styled/flexes'
 export default class MainNav extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   showMenu() {
@@ -24,7 +23,7 @@ export default class MainNav extends React.Component {
       background: steelblue;
       margin: 0;
       > ul {
-        font-size: 1.2em;
+        font-size: 1em;
         text-align: center;
         list-style: none;
         margin: 0;
@@ -32,20 +31,16 @@ export default class MainNav extends React.Component {
         > span { display: none }
         > div { ${ flex.row }
           > li { width: 15%; padding: 0.2em 0;
-              > a { color: coral; }
+              > a { color: khaki; }
             &:hover { background: coral;
               > a { color: steelblue; }
             }
           }
         }
       }
-      ${ media.desktop`
-        > ul {
-          font-size: 1.2em;
-        }`};
       ${ media.tablet`
         > ul {
-          font-size: 1em;
+          font-size: 0.9em;
         }`};
       ${ media.handheld`
         > ul { position: relative;
@@ -64,8 +59,7 @@ export default class MainNav extends React.Component {
                       padding: 1em;
                       transition: all 0.5s;
                     > li { display: block; width: 100%;
-                      > a { color: coral; text-align: left;
-                        &:hover { background: coral; color: steelblue; }
+                      &:hover > a { background: coral; color: steelblue; }
                     }
                    }
           }

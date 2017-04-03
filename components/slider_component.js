@@ -15,7 +15,7 @@ import { Title } from './styled/titles';
 import { Button } from './styled/buttons';
 import { Box } from './styled/boxes';
 import { Pic } from './styled/pics';
-import { WrapperMax1100 } from './styled/wrappers'
+import { Section } from './styled/wrappers'
 
 export default class Slider extends React.Component {
   constructor(props) {
@@ -38,24 +38,20 @@ showAllPics() {
         )
     })
 
-    const BTN_more = styled.section`
-      ${buttons('active')} {
-        border: none;
-      }
+    const Wrapper = styled.div`
+          > a { margin: 5%; }
     `
     return (
-
-	    <WrapperMax1100 id="wrapper-fotos" className="icons-wrapper album-fotos">
-          { pics }
-        <BTN_more className="button-more-section">
-        <Link to="/fotos" className="button-more">
-          <Button className="cta-button"
-          onClick={this.showAllPics.bind(this)}>
-            Ver todas fotos
-          </Button>
-        </Link>
-        </BTN_more>
-      </WrapperMax1100>
+      <Section>
+  	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
+            { pics }
+            <Link to="/fotos" >
+              <Button onClick={this.showAllPics.bind(this)}>
+                Ver todas fotos
+              </Button>
+            </Link>
+        </Wrapper>
+      </Section>
     )
   }
 }

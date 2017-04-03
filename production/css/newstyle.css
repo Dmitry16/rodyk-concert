@@ -25,7 +25,7 @@ h1.site-title {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 3%;
+  padding: 0;
 }
 .all_pics_section {
   margin: 5% auto;
@@ -38,19 +38,10 @@ h1.site-title {
   background: papayawhip;
 }
 .cta {
-  width: 90%;
-  margin: 0 5% 7%;
+  width: 100%;
+  margin: 0;
 }
-.cta-button {
-  font-weight: 100;
-  background: darkkhaki;
-  margin-top: 5%;
-}
-.cta-button:hover {
-  background: lightgreen;
-  color: red;
-  box-shadow: 5px 5px 20px rgba(#000,0.7);
-}
+
 .img.sm img {
   width: 100%;
 }
