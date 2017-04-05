@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import styled from "styled-components"
+import styled from 'styled-components'
 import { TitleCTA } from './styled/titles'
 import { Button, ButtonCTA } from './styled/buttons'
 import { Box } from './styled/boxes'
@@ -60,7 +60,6 @@ export default class CTA extends React.Component {
       &:hover {
         background: lightgreen;
         color: red;
-        box-shadow: 5px 5px 20px rgba(#000,0.7);
       }
       ${ media.desktop`
         padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
@@ -78,7 +77,7 @@ export default class CTA extends React.Component {
     return (
       <Section>
         <Wrapper className="cta">
-          <TitleCTA>Que te apetece hacer?</TitleCTA>
+          <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className="cta-buttons-wrapper">
             <Link to="/fotos"><ButtonCTA className="cta-button">
             Conocer quien somos</ButtonCTA></Link>

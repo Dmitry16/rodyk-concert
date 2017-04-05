@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import { media } from './medias'
 import { css } from 'styled-components'
 
@@ -11,7 +11,7 @@ export const Button = styled.button`
   &:hover {
     background: lightgreen;
     color: red;
-    box-shadow: 5px 5px 20px rgba(#000,0.7);
+    box-shadow: 5px 5px 10px black;
   }
   ${ media.desktop`
     padding: ${props => props.small ? '0 0.5em' : '1.5em 7em'};

@@ -10,12 +10,11 @@ import AllPics from "./allpics";
 //Styled componentsimport styled from "styled-components";
 import styled from "styled-components";
 import { buttons } from 'polished';
-
+import { media } from './styled/medias'
 import { Title } from './styled/titles';
 import { Button } from './styled/buttons';
 import { Box } from './styled/boxes';
-import { PicWrapper } from './styled/pics';
-import { Section } from './styled/wrappers'
+import { Section, PicWrapper } from './styled/wrappers'
 
 export default class Slider extends React.Component {
   constructor(props) {
@@ -30,11 +29,20 @@ showAllPics() {
   render() {
 
     const Wrapper = styled.div`
-          > a { margin: 5%; }
+          > #wrprBtn { margin: 5%;
+            }
     `
     const Img = styled.img`
-          max-width: 100%;
-          max-height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.5s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    `
+    const wrprBtn = styled.div`
+      &:hover { box-shadow: 5px 5px 10px black; }
     `
 
     let pics = this.props.pics.map((pic, id) => {
@@ -45,16 +53,17 @@ showAllPics() {
         )
     })
 
-
     return (
       <Section>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
             { pics }
-            <Link to="/fotos" >
-              <Button onClick={this.showAllPics.bind(this)}>
-                Ver todas fotos
-              </Button>
-            </Link>
+            <wrprBtn id='wrprBtn'>
+              <Link to="/fotos">
+                <Button onClick={this.showAllPics.bind(this)}>
+                  Ver todas fotos
+                </Button>
+              </Link>
+            </wrprBtn>
         </Wrapper>
       </Section>
     )
