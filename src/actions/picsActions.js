@@ -23,6 +23,7 @@ export function fetchAllPics() {
     })
   }
 }
+
 // export const FETCH_USER = './src/actions/FETCH_USER';
 //
 // export function fetchUser() {

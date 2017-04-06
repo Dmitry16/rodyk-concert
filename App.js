@@ -19,15 +19,16 @@ import Article from "./components/article"
 // css
 import styles from './production/css/newstyle.css'
 //Styled components
-import { Container_main } from './components/styled/containers'
-import { WrapperMax1100 } from './components/styled/wrappers'
+import { Container_main, WrapperMax1100 } from './components/styled/wrappers'
 import { ThemeProvider } from 'styled-components'
 import { greenTheme } from './components/styled/themes'
 
 @connect((store) => {
   return {
     initialPics: store.initialPics,
-    pics: store.pics
+    pics: store.pics,
+    modalVisibility: store.modalVisibility,
+    modalPic: store.modalPic,
   }
 })
 
@@ -50,8 +51,13 @@ export default class App extends React.Component {
 
   renderSlider = () => {
     return (
-      <Slider showPics={this.showAllPics.bind(this)}  pics={this.props.initialPics}
-      dispatch={ this.props.dispatch }/>
+      <Slider
+        showPics={this.showAllPics.bind(this)}
+        pics={this.props.initialPics}
+        dispatch={ this.props.dispatch }
+        modalVisibility={ this.props.modalVisibility }
+        modalPic={ this.props.modalPic }
+      />
     )
   }
 
@@ -63,6 +69,9 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    // console.log(this.props.modalVisible)
+    // console.log(this.props.modalPic)
 
     return (
       <Router>
