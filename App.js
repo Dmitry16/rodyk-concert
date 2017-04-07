@@ -29,6 +29,8 @@ import { greenTheme } from './components/styled/themes'
     pics: store.pics,
     modalVisibility: store.modalVisibility,
     modalPic: store.modalPic,
+    nextImg: store.nextImg,
+    prevImg: store.prevImg,
   }
 })
 
@@ -57,6 +59,8 @@ export default class App extends React.Component {
         dispatch={ this.props.dispatch }
         modalVisibility={ this.props.modalVisibility }
         modalPic={ this.props.modalPic }
+        nextImg={ this.props.nextImg }
+        prevImg={ this.props.prevImg }
       />
     )
   }
@@ -71,7 +75,7 @@ export default class App extends React.Component {
   render() {
 
     // console.log(this.props.modalVisible)
-    // console.log(this.props.modalPic)
+    // console.log(this.props.nextImg)
 
     return (
       <Router>

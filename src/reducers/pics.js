@@ -16,12 +16,12 @@ const initialPics = [
   },
   {
     id: 4,
-    source_url:"http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider3.jpeg",
+    source_url:"http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/15.jpeg",
     alt_text:"anunnaki"
   },
   {
     id: 5,
-    source_url:"http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/slider2.jpeg",
+    source_url:"http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/16.jpeg",
     alt_text:"anunnaki"
   },
   {
@@ -61,7 +61,25 @@ export default function reducer(state=initialState, action) {
         return {
           ...state,
           modalVisibility: 'visible',
-          modalPic: action.payload,
+          modalPic: action.payload[0],
+          nextImg: action.payload[1],
+          prevImg: action.payload[2],
+        }
+      }
+      case "SHOW_PREV_IMG": {
+        return {
+          ...state,
+          modalPic: action.payload[0],
+          nextImg: action.payload[1],
+          prevImg: action.payload[2],
+        }
+      }
+      case "SHOW_NEXT_IMG": {
+        return {
+          ...state,
+          modalPic: action.payload[0],
+          nextImg: action.payload[1],
+          prevImg: action.payload[2],
         }
       }
       case "CLOSE_MODAL": {
