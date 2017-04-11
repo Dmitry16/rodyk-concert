@@ -1,8 +1,8 @@
 module.exports = {
-  entry: './app.js',
+  entry: './index.js',
 
   output: {
-    //path: '/home/dd/work/anunnaki2/app/build',
+    publicPath: '/',
     filename: 'bundle.js'
   },
 
@@ -14,7 +14,7 @@ module.exports = {
         loaders: [
           'react-hot-loader',
           'babel-loader'
-        ]
+        ],
       },
       {
         test: /\.(css|scss)$/,

@@ -1,15 +1,42 @@
-import React from 'react';
+import React from 'react'
+import styled from 'styled-components'
+
+import { Section } from './styled/wrappers'
+import { media } from './styled/medias'
 
 class SliderTop extends React.Component {
+
 	render() {
+
+			const Wrapper = styled.div`
+				position: relative;
+  			min-height: 25em;
+  			overflow: hidden;
+				${ media.desktop`
+  				min-height: 25em;
+			  ` };
+				${ media.tablet`
+  				min-height: 20em;
+			  ` };
+				${ media.handheld`
+  				min-height: 10em;
+			  ` };
+			`
+			const Img = styled.img`
+				max-width: 100%;
+				max-heigth: 100%;
+				margin: 0;
+			`
 		return (
-			<div>
-				<img src='./assets/img/album/17.jpeg' alt='xxx' className="slider-img in" />
-				<img src='./assets/img/album/13.jpeg' alt='xxx' className="slider-img out" />
-				<img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />
-				<img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
-			</div>
-		);
+			<Section style={{marginTop: '5%'}}>
+				<Wrapper>
+					<Img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img in" />
+					<Img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
+					<Img src='./assets/img/album/14.jpeg' alt='xxx' className="slider-img out" />
+					<Img src='./assets/img/album/15.jpeg' alt='xxx' className="slider-img out" />
+				</Wrapper>
+			</Section>
+		)
 	}
 }
 

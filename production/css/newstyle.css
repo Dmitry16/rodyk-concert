@@ -1,3 +1,52 @@
+html {
+  background: mediumseagreen;
+  padding: 0;
+}
 body {
   background: #fda !important;
+  margin: 0;
+}
+img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+}
+h1.site-title {
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.icon, .header-logo-title,
+.all_pics_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.all_pics, .icons-wrapper.album-fotos, .blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.all_pics_section {
+  margin: 5% auto;
+}
+.all_pics_section h3 {
+  margin: 0 0 5% 0;
+}
+.article {
+  border: 1px solid palevioletred;
+  background: papayawhip;
+}
+.cta {
+  width: 100%;
+  margin: 0;
+}
+
+.img.sm img {
+  width: 100%;
 }
