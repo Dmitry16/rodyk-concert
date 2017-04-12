@@ -12,13 +12,12 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: [
-          'react-hot-loader',
           'babel-loader'
         ],
       },
       {
         test: /\.(css|scss)$/,
-        loader: 'style-loader!css-loader!sass-loader'
+        loader: 'style-loader!css-loader'
       },
       {
         test: /\.html$/,

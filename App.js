@@ -25,23 +25,18 @@ import { greenTheme } from './components/styled/themes'
 
 @connect((store) => {
   return {
-    initialPics: store.initialPics,
-    pics: store.pics,
-    modalVisibility: store.modalVisibility,
-    modalPic: store.modalPic,
-    nextImg: store.nextImg,
-    prevImg: store.prevImg,
+    initialPics: store.pics.initialPics,
+    pics: store.pics.pics,
+    modalVisibility: store.modal.modalVisibility,
+    modalPic: store.modal.modalPic,
+    nextImg: store.modal.nextImg,
+    prevImg: store.modal.prevImg,
   }
 })
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
-  }
-
-  componentWillMount() {
-    // this.props.dispatch(fetchPics())
-    // console.log(this.props)
   }
 
   showAllPics = () => {
