@@ -17,6 +17,7 @@ import AllPics from "./components/allpics"
 import Blog from "./components/blog"
 import Article from "./components/article"
 import ContactPage from "./components/contactPage"
+import Icons from "./components/icons"
 // css
 import styles from './production/css/newstyle.css'
 //Styled components
@@ -83,10 +84,11 @@ export default class App extends React.Component {
               <Route exact={true} path="/" component={SliderTop}/>
               <Route exact={true} path="/" component={Manifesto}/>
               <Route exact={true} path="/" component={CTA}/>
+              <Route exact={true} path="/" component={Icons}/>              
               <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
               <Route exact={true} path="/" component={Blog}/>
               <Route path="/blog" component={Blog}/>
-              <Route path="/contact" component={ContactPage}/>              
+              <Route path="/contact" component={ContactPage}/>
               <Route path="/fotos" render={this.renderAllPics.bind(this)}/>
             </WrapperMax1100>
             <Route path="/" component={Footer}/>

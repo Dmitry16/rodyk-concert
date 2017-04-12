@@ -1,14 +1,34 @@
-import React from 'react';
+import React from 'react'
+
+const icons = [
+  {
+    icon: 'icon-apple',
+    title: 'front-pics',
+    link: '#'
+  },
+  {
+    icon: 'icon-apple',
+    title: 'front-pics',
+    link: '#'
+  },
+  {
+    icon: 'icon-apple',
+    title: 'front-pics',
+    link: '#'
+  },
+  {
+    icon: 'icon-apple',
+    title: 'front-pics',
+    link: '#'
+  },
+]
 
 class Icons extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
       <div className="icons-wrapper">
-      {this.props.icons.map((icon,id) =>
+      {icons.map((icon,id) =>
           <a href={icon.link}>
             <div className="icon">
                 <p className={icon.icon}></p>
@@ -21,4 +41,4 @@ class Icons extends React.Component {
   }
 }
 
-export default Icons;
+export default Icons
