@@ -22,7 +22,6 @@ const Wrapper = styled.div`
       > a > p.icon_title  { font-size: 1em }
   `}
 `
-
 export default class Icon extends React.Component {
   constructor() {
     super();
