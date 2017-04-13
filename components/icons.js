@@ -1,24 +1,47 @@
 import React from 'react'
+import Icon from './icon'
+import { Section } from './styled/wrappers'
+import { H1 } from './styled/typographies'
 
 const icons = [
   {
-    icon: 'icon-apple',
-    title: 'front-pics',
+    icon: 'icon-map-signs',
+    title: 'Senderismo',
     link: '#'
   },
   {
-    icon: 'icon-apple',
-    title: 'front-pics',
+    icon: 'icon-lemon-o',
+    title: 'Recogida de frutos silvestres',
     link: '#'
   },
   {
-    icon: 'icon-apple',
-    title: 'front-pics',
+    icon: 'icon-cutlery',
+    title: 'Cocina ecologica creativa',
     link: '#'
   },
   {
-    icon: 'icon-apple',
-    title: 'front-pics',
+    icon: 'icon-pagelines',
+    title: 'Fitoterapia',
+    link: '#'
+  },
+  {
+    icon: 'icon-leaf',
+    title: 'Detox',
+    link: '#'
+  },
+  {
+    icon: 'icon-heartbeat',
+    title: 'Holistica',
+    link: '#'
+  },
+  {
+    icon: 'icon-moon-o',
+    title: 'Contemplación de astros',
+    link: '#'
+  },
+  {
+    icon: 'icon-official',
+    title: 'Cine y musica',
     link: '#'
   },
 ]
@@ -27,16 +50,18 @@ class Icons extends React.Component {
 
   render() {
     return (
-      <div className="icons-wrapper">
-      {icons.map((icon,id) =>
-          <a href={icon.link}>
-            <div className="icon">
-                <p className={icon.icon}></p>
-                <p className="icon_title">{icon.title}</p>
-            </div>
-          </a>
-        )}
-      </div>
+      <Section>
+        <H1>Nuestros Intereses y Hobbies</H1>
+        <div className="icons-wrapper">
+          {icons.map((icon,id) =>
+            <Icon
+              href={icon.link}
+              className={icon.icon}
+              icon_title={icon.title}
+            />
+          )}
+        </div>
+      </Section>
     )
   }
 }
