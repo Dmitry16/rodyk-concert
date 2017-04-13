@@ -27,11 +27,11 @@ showModal(e) {
   let nextImg = (this.getNextImg(actualPic)) ? this.getNextImg(actualPic) : ''
   let prevImg = (this.getPrevImg(actualPic)) ? this.getPrevImg(actualPic) : ''
   this.props.dispatch({type: 'SHOW_MODAL',
-                        payload: [
-                          actualPic,
-                          nextImg,
-                          prevImg
-                        ]
+                      payload: [
+                        actualPic,
+                        nextImg,
+                        prevImg
+                      ]
   })
 }
 
@@ -216,7 +216,6 @@ showAllPics() {
             <wrprBtn id='wrprBtn'>
               <Link to="/fotos">
                 <Button
-                  style={{zIndex:999}}
                   onClick={this.showAllPics.bind(this)}>
                   Ver todas fotos
                 </Button>

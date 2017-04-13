@@ -8,10 +8,16 @@ import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
+//Actions
+import { fetchAllPics } from '../src/actions/picsActions'
 
 export default class CTA extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  showPics() {
+    this.props.dispatch(fetchAllPics())
   }
 
   render() {
@@ -83,8 +89,10 @@ export default class CTA extends React.Component {
             Conocer quien somos</ButtonCTA></Link>
             <Link to="/fotos"><ButtonCTA className="cta-button">
             Saber que ofrecemos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button">
-              Ver las fotos</ButtonCTA></Link>
+            <Link to="/fotos"><ButtonCTA className="cta-button"
+                                onClick={this.showPics.bind(this)}>
+              Ver las fotos</ButtonCTA>
+            </Link>
           </BoxCTA>
         </Wrapper>
       </Section>

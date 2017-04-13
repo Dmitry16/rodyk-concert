@@ -61,11 +61,22 @@ export default class App extends React.Component {
       />
     )
   }
-
   renderAllPics = () => {
     return (
-      <AllPics pics={ this.props.pics } initialPics={ this.props.initialPics }
+      <AllPics
+        pics={ this.props.pics }
+        initialPics={ this.props.initialPics }
        />
+    )
+  }
+  renderMainNav = () => {
+    return (
+      <MainNav dispatch={ this.props.dispatch } />
+    )
+  }
+  renderCTA = () => {
+    return (
+      <CTA dispatch={ this.props.dispatch } />
     )
   }
 
@@ -80,10 +91,10 @@ export default class App extends React.Component {
           <Container_main>
             <Route path="/" component={HeaderLarge}/>
             <WrapperMax1100>
-              <Route path="/" component={MainNav}/>
+              <Route path="/" render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path="/" component={SliderTop}/>
               <Route exact={true} path="/" component={Manifesto}/>
-              <Route exact={true} path="/" component={CTA}/>
+              <Route exact={true} path="/" render={this.renderCTA.bind(this)}/>
               <Route exact={true} path="/" component={Icons}/>
               <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
               <Route exact={true} path="/" component={Blog}/>

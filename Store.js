@@ -5,22 +5,9 @@ import promise from "redux-promise-middleware"
 import reducer from './src/reducers/index'
 import axios from 'axios'
 
-// import { combineReducers } from 'redux'
-// import { reducer as formReducer } from 'redux-form'
-// import picsReducer from './src/reducers/pics'
-// import modalReducer from './src/reducers/modal'
-//
-// const reducer = combineReducers({
-//   modal: modalReducer,
-//   pics: picsReducer
-// })
-
-// const reducer = picsReducer
-
 const middleware = applyMiddleware(promise(), thunk, createLogger)
 
-const store = createStore(reducer, middleware,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducer, middleware)
 
 export default store
 

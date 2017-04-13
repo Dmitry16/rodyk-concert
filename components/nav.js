@@ -7,15 +7,16 @@ import styled from "styled-components"
 import { WrapperMax1100 } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
+//Actions
+import { fetchAllPics } from '../src/actions/picsActions'
 
 export default class MainNav extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  showMenu() {
-    // const menu = document.querySelector('.list');
-    // menu.style = 'display: block; height: 3em; opacity: 0.5';
+  showPics() {
+    this.props.dispatch(fetchAllPics())
   }
 
   render() {
@@ -66,20 +67,24 @@ export default class MainNav extends React.Component {
           }
       `};
     `
+
     return (
       <Wrapper>
           <ul>
-          <span className="icon-bars"
-          onClick={this.showMenu.bind(this)}></span>
+          <span className="icon-bars"></span>
           <div className="list">
               <li>
-                <Link to='/'>Home</Link>
+                <Link to='/'>Inicio</Link>
               </li>
               <li>
                 <Link to='/about'>Manifesto</Link>
               </li>
               <li>
-                <Link to='/fotos'>Fotos</Link>
+                <Link to='/fotos'>
+                  <div onClick={this.showPics.bind(this)}>
+                    Fotos
+                  </div>
+                </Link>
               </li>
               <li>
                 <Link to='/blog'>Blog</Link>
