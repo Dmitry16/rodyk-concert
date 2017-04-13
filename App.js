@@ -84,9 +84,10 @@ export default class App extends React.Component {
               <Route exact={true} path="/" component={SliderTop}/>
               <Route exact={true} path="/" component={Manifesto}/>
               <Route exact={true} path="/" component={CTA}/>
-              <Route exact={true} path="/" component={Icons}/>              
+              <Route exact={true} path="/" component={Icons}/>
               <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
               <Route exact={true} path="/" component={Blog}/>
+              <Route path="/about" component={Manifesto}/>
               <Route path="/blog" component={Blog}/>
               <Route path="/contact" component={ContactPage}/>
               <Route path="/fotos" render={this.renderAllPics.bind(this)}/>

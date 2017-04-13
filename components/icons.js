@@ -58,6 +58,7 @@ class Icons extends React.Component {
               href={icon.link}
               className={icon.icon}
               icon_title={icon.title}
+              key={id}
             />
           )}
         </div>
