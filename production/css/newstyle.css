@@ -50,3 +50,36 @@ h1.site-title {
 .img.sm img {
   width: 100%;
 }
+input, textarea, button[type="submit"] {
+  margin: 0 0 1%;
+  padding: 1%;
+  width: 50%;
+  background: #aee8a7;
+  border: 1px solid #fff;
+  border-radius: 0.2em;
+}
+button[type="submit"] {
+  background: mediumseagreen;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background: lightgreen;
+  color: red;
+  box-shadow: 5px 5px 10px #000;
+}
+input, button[type="submit"] {
+  height: 2.5em;
+}
+textarea {
+  height: 4em;
+}
+@media only screen and (max-width: 500px) {
+  input, textarea, button[type="submit"] {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  input, textarea, button[type="submit"] {
+    width: 30%;
+  }
+}

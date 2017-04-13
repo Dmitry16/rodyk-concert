@@ -1,15 +1,28 @@
-import { applyMiddleware, createStore } from 'redux';
-import createLogger from "redux-logger";
-import thunk from "redux-thunk";
-import promise from "redux-promise-middleware";
-import reducer from './src/reducers/pics';
-import axios from 'axios';
+import { applyMiddleware, createStore } from 'redux'
+import createLogger from "redux-logger"
+import thunk from "redux-thunk"
+import promise from "redux-promise-middleware"
+import reducer from './src/reducers/index'
+import axios from 'axios'
 
-import fetchPics from './src/actions/picsActions';
+// import { combineReducers } from 'redux'
+// import { reducer as formReducer } from 'redux-form'
+// import picsReducer from './src/reducers/pics'
+// import modalReducer from './src/reducers/modal'
+//
+// const reducer = combineReducers({
+//   modal: modalReducer,
+//   pics: picsReducer
+// })
 
-const middleware = applyMiddleware(promise(), thunk, createLogger);
+// const reducer = picsReducer
 
-export default createStore(reducer, middleware);
+const middleware = applyMiddleware(promise(), thunk, createLogger)
+
+const store = createStore(reducer, middleware,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+export default store
 
 // store.dispatch(fetchPics());
 

@@ -48,7 +48,8 @@ export default class MainNav extends React.Component {
               height: 0; opacity: 0; }
           > span { ${ flex.row }
               font-size: 1em;
-              color: coral; padding: 3px 0;
+              color: khaki;
+              padding: 3px 0;
               cursor: pointer;
             }
           &:hover > div { position: absolute;
@@ -84,7 +85,7 @@ export default class MainNav extends React.Component {
                 <Link to='/blog'>Blog</Link>
               </li>
               <li>
-                <Link to='/fotos'>Contacto</Link>
+                <Link to='/contact'>Contacto</Link>
               </li>
           </div>
         </ul>

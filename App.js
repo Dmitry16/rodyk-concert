@@ -16,6 +16,8 @@ import MainNav from "./components/nav"
 import AllPics from "./components/allpics"
 import Blog from "./components/blog"
 import Article from "./components/article"
+import ContactPage from "./components/contactPage"
+import Icons from "./components/icons"
 // css
 import styles from './production/css/newstyle.css'
 //Styled components
@@ -25,23 +27,18 @@ import { greenTheme } from './components/styled/themes'
 
 @connect((store) => {
   return {
-    initialPics: store.initialPics,
-    pics: store.pics,
-    modalVisibility: store.modalVisibility,
-    modalPic: store.modalPic,
-    nextImg: store.nextImg,
-    prevImg: store.prevImg,
+    initialPics: store.pics.initialPics,
+    pics: store.pics.pics,
+    modalVisibility: store.modal.modalVisibility,
+    modalPic: store.modal.modalPic,
+    nextImg: store.modal.nextImg,
+    prevImg: store.modal.prevImg,
   }
 })
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
-  }
-
-  componentWillMount() {
-    // this.props.dispatch(fetchPics())
-    // console.log(this.props)
   }
 
   showAllPics = () => {
@@ -87,9 +84,12 @@ export default class App extends React.Component {
               <Route exact={true} path="/" component={SliderTop}/>
               <Route exact={true} path="/" component={Manifesto}/>
               <Route exact={true} path="/" component={CTA}/>
+              <Route exact={true} path="/" component={Icons}/>
               <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
               <Route exact={true} path="/" component={Blog}/>
+              <Route path="/about" component={Manifesto}/>
               <Route path="/blog" component={Blog}/>
+              <Route path="/contact" component={ContactPage}/>
               <Route path="/fotos" render={this.renderAllPics.bind(this)}/>
             </WrapperMax1100>
             <Route path="/" component={Footer}/>
