@@ -199,13 +199,18 @@ showAllPics() {
         )
     })
 
+console.log(this.props.closeModal);
+// function () {
+// 	    return dispatch(actionCreator.apply(undefined, arguments));
+// 	  }
+
     return (
       <Section>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
             { pics }
 
             <Modal id='modal'>
-              <Close onClick={this.props.closeModal}>X</Close>
+              <Close onClick={() => this.props.closeModal()}>X</Close>
               <ModalImgWrapper>
                 <PrevImg onClick={this.showPrevImg.bind(this)}>PRV</PrevImg>
                 <ModalImg id='modalImg' src={this.props.modalPic} alt='vv'/>
