@@ -35,9 +35,9 @@ showModal(e) {
   })
 }
 
-closeModal() {
-  this.props.dispatch({type: 'CLOSE_MODAL'})
-}
+// closeModal() {
+//   this.props.dispatch({type: 'CLOSE_MODAL'})
+// }
 
 getPrevImg(actualPic) {
   const pics = this.props.pics;
@@ -205,7 +205,7 @@ showAllPics() {
             { pics }
 
             <Modal id='modal'>
-              <Close onClick={this.closeModal.bind(this)}>X</Close>
+              <Close onClick={this.props.closeModal}>X</Close>
               <ModalImgWrapper>
                 <PrevImg onClick={this.showPrevImg.bind(this)}>PRV</PrevImg>
                 <ModalImg id='modalImg' src={this.props.modalPic} alt='vv'/>

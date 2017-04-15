@@ -4,6 +4,9 @@ import React from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom'
 import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+//Actions
+import * as modalActionCreators from "./src/actions/modalActions"
 // Components
 import HeaderLarge from "./components/header"
 import Manifesto from "./components/manifesto"
@@ -41,6 +44,10 @@ export default class App extends React.Component {
     super(props)
   }
 
+  closeModal = () => {
+    return bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
+  }
+
   showAllPics = () => {
     console.log(this.props.pics)
     if (this.props.pics)
@@ -53,6 +60,7 @@ export default class App extends React.Component {
       <Slider
         showPics={this.showAllPics.bind(this)}
         pics={this.props.initialPics}
+        closeModal={ this.closeModal.bind(this) }
         dispatch={ this.props.dispatch }
         modalVisibility={ this.props.modalVisibility }
         modalPic={ this.props.modalPic }
@@ -81,9 +89,6 @@ export default class App extends React.Component {
   }
 
   render() {
-
-    // console.log(this.props.modalVisible)
-    // console.log(this.props.nextImg)
 
     return (
       <Router>
