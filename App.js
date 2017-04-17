@@ -44,10 +44,6 @@ export default class App extends React.Component {
     super(props)
   }
 
-  closeModal = () => {
-    return bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
-  }
-
   showAllPics = () => {
     console.log(this.props.pics)
     if (this.props.pics)
@@ -55,20 +51,20 @@ export default class App extends React.Component {
     this.renderAllPics(this.props.pics)
   }
 
-  renderSlider = () => {
-    return (
-      <Slider
-        showPics={this.showAllPics.bind(this)}
-        pics={this.props.initialPics}
-        closeModal={ this.closeModal.bind(this) }
-        dispatch={ this.props.dispatch }
-        modalVisibility={ this.props.modalVisibility }
-        modalPic={ this.props.modalPic }
-        nextImg={ this.props.nextImg }
-        prevImg={ this.props.prevImg }
-      />
-    )
-  }
+  // renderSlider = () => {
+  //   return (
+  //     <Slider
+  //       showPics={this.showAllPics.bind(this)}
+  //       pics={this.props.initialPics}
+  //       closeModal={ this.closeModal.bind(this) }
+  //       dispatch={ this.props.dispatch }
+  //       modalVisibility={ this.props.modalVisibility }
+  //       modalPic={ this.props.modalPic }
+  //       nextImg={ this.props.nextImg }
+  //       prevImg={ this.props.prevImg }
+  //     />
+  //   )
+  // }
   renderAllPics = () => {
     return (
       <AllPics
@@ -90,6 +86,23 @@ export default class App extends React.Component {
 
   render() {
 
+    const closeModal = bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
+
+    const renderSlider = () => {
+      return (
+        <Slider
+          showPics={this.showAllPics.bind(this)}
+          pics={this.props.initialPics}
+          closeModal={ closeModal }
+          dispatch={ this.props.dispatch }
+          modalVisibility={ this.props.modalVisibility }
+          modalPic={ this.props.modalPic }
+          nextImg={ this.props.nextImg }
+          prevImg={ this.props.prevImg }
+        />
+      )
+    }
+
     return (
       <Router>
         <ThemeProvider theme={ greenTheme }>
@@ -101,7 +114,7 @@ export default class App extends React.Component {
               <Route exact={true} path="/" component={Manifesto}/>
               <Route exact={true} path="/" render={this.renderCTA.bind(this)}/>
               <Route exact={true} path="/" component={Icons}/>
-              <Route exact={true} path="/" render={this.renderSlider.bind(this)}/>
+              <Route exact={true} path="/" render={renderSlider}/>
               <Route exact={true} path="/" component={Blog}/>
               <Route path="/about" component={Manifesto}/>
               <Route path="/blog" component={Blog}/>

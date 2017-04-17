@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { clearFix } from 'polished'
 import { media } from './styled/medias'
 
 class HeaderLarge extends React.Component {
@@ -39,6 +38,7 @@ class HeaderLarge extends React.Component {
           font-size: 1.3em; line-height: 1.2em; padding-top: 0; margin: 0;
         }`};
     `
+
     return (
       <Wrapper>
         <p className="icon-apple"></p>

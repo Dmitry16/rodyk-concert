@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
 import { fetchAllPics } from '../src/actions/picsActions'
+import { closeModal } from '../src/actions/modalActions'
 //Components
 import AllPics from "./allpics"
 //Styled componentsimport styled from "styled-components";
@@ -35,9 +36,7 @@ showModal(e) {
   })
 }
 
-// closeModal() {
-//   this.props.dispatch({type: 'CLOSE_MODAL'})
-// }
+
 
 getPrevImg(actualPic) {
   const pics = this.props.pics;
@@ -199,18 +198,13 @@ showAllPics() {
         )
     })
 
-console.log(this.props.closeModal);
-// function () {
-// 	    return dispatch(actionCreator.apply(undefined, arguments));
-// 	  }
-
     return (
       <Section>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
             { pics }
 
             <Modal id='modal'>
-              <Close onClick={() => this.props.closeModal()}>X</Close>
+              <Close onClick={this.props.closeModal}>X</Close>
               <ModalImgWrapper>
                 <PrevImg onClick={this.showPrevImg.bind(this)}>PRV</PrevImg>
                 <ModalImg id='modalImg' src={this.props.modalPic} alt='vv'/>
