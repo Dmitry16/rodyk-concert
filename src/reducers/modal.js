@@ -11,8 +11,8 @@ export default function modalReducer(state={
           ...state,
           modalVisibility: 'visible',
           modalPic: action.payload[0],
-          nextImg: action.payload[1],
-          prevImg: action.payload[2],
+          // nextImg: action.payload[1],
+          // prevImg: action.payload[2],
         }
       }
       case "SHOW_PREV_IMG": {

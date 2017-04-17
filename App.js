@@ -87,12 +87,14 @@ export default class App extends React.Component {
   render() {
 
     const closeModal = bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
+    const showModal = bindActionCreators(modalActionCreators.showModal, this.props.dispatch)
 
     const renderSlider = () => {
       return (
         <Slider
           showPics={this.showAllPics.bind(this)}
           pics={this.props.initialPics}
+          showModal={ showModal }
           closeModal={ closeModal }
           dispatch={ this.props.dispatch }
           modalVisibility={ this.props.modalVisibility }

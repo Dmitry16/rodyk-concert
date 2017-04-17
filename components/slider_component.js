@@ -23,20 +23,18 @@ export default class Slider extends React.Component {
     super(props);
   }
 
-showModal(e) {
-  const actualPic = e.target.getAttribute('src')
-  let nextImg = (this.getNextImg(actualPic)) ? this.getNextImg(actualPic) : ''
-  let prevImg = (this.getPrevImg(actualPic)) ? this.getPrevImg(actualPic) : ''
-  this.props.dispatch({type: 'SHOW_MODAL',
-                      payload: [
-                        actualPic,
-                        nextImg,
-                        prevImg
-                      ]
-  })
-}
-
-
+// showModal(e) {
+//   const actualPic = e.target.getAttribute('src')
+//   let nextImg = (this.getNextImg(actualPic)) ? this.getNextImg(actualPic) : ''
+//   let prevImg = (this.getPrevImg(actualPic)) ? this.getPrevImg(actualPic) : ''
+//   this.props.dispatch({type: 'SHOW_MODAL',
+//                       payload: [
+//                         actualPic,
+//                         nextImg,
+//                         prevImg
+//                       ]
+//   })
+// }
 
 getPrevImg(actualPic) {
   const pics = this.props.pics;
@@ -193,7 +191,7 @@ showAllPics() {
         return (
           <PicWrapper key={pic.id}>
             <Img src={pic.source_url} alt={pic.alt_text}
-              onClick = {this.showModal.bind(this)}/>
+              onClick = {this.props.showModal}/>
           </PicWrapper>
         )
     })
