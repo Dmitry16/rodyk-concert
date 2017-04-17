@@ -51,20 +51,6 @@ export default class App extends React.Component {
     this.renderAllPics(this.props.pics)
   }
 
-  // renderSlider = () => {
-  //   return (
-  //     <Slider
-  //       showPics={this.showAllPics.bind(this)}
-  //       pics={this.props.initialPics}
-  //       closeModal={ this.closeModal.bind(this) }
-  //       dispatch={ this.props.dispatch }
-  //       modalVisibility={ this.props.modalVisibility }
-  //       modalPic={ this.props.modalPic }
-  //       nextImg={ this.props.nextImg }
-  //       prevImg={ this.props.prevImg }
-  //     />
-  //   )
-  // }
   renderAllPics = () => {
     return (
       <AllPics
@@ -88,6 +74,9 @@ export default class App extends React.Component {
 
     const closeModal = bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
     const showModal = bindActionCreators(modalActionCreators.showModal, this.props.dispatch)
+    const showNextImg = bindActionCreators(modalActionCreators.showNextImg, this.props.dispatch)
+    const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, this.props.dispatch)
+
 
     const renderSlider = () => {
       return (
@@ -96,6 +85,8 @@ export default class App extends React.Component {
           pics={this.props.initialPics}
           showModal={ showModal }
           closeModal={ closeModal }
+          showNextImg={ showNextImg }
+          showPrevImg={ showPrevImg }
           dispatch={ this.props.dispatch }
           modalVisibility={ this.props.modalVisibility }
           modalPic={ this.props.modalPic }
