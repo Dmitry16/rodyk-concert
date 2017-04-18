@@ -12,14 +12,28 @@ export default class AllPics extends React.Component {
   }
 
   render() {
-    let pics = this.props.pics.map((pic, id) => {
-      return (
-        <PicWrapper key={pic.id} className="img sm">
-          <img src={pic.source_url} alt={pic.alt_text} />
 
-        </PicWrapper>
-      )
-    });
+    const Img = styled.img`
+      max-width: 100%;
+      max-height: 100%;
+      transition: transform 0.5s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    `
+
+    const { nextImg, prevImg, modalPic } = this.props
+
+    let pics = this.props.pics
+    let pics_arr = pics.map((pic, id) => {
+        return (
+          <PicWrapper key={pic.id}>
+            <Img src={pic.source_url} alt={pic.alt_text} className='albumPics'
+              onClick = {(e) => this.props.showModal(e)}/>
+          </PicWrapper>
+        )
+    })
 
     const Wrapper = styled.div`
       display: flex;
