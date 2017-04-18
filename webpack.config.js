@@ -1,4 +1,5 @@
 module.exports = {
+  devtool: 'inline-sourcemap',  
   entry: './index.js',
 
   output: {
