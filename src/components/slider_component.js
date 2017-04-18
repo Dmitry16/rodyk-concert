@@ -21,7 +21,6 @@ export default class Slider extends React.Component {
     super(props);
   }
 
-
   showAllPics() {
     this.props.dispatch(fetchAllPics())
   }
