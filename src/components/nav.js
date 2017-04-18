@@ -1,14 +1,14 @@
 //LIBS
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //STYLED COMPONENTS
-import styled from "styled-components"
+import styled from 'styled-components'
 import { WrapperMax1100 } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
 //Actions
-import { fetchAllPics } from '../src/actions/picsActions'
+import { fetchAllPics } from '../actions/picsActions'
 
 export default class MainNav extends React.Component {
   constructor(props) {

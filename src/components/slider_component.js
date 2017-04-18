@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom'
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 //Actions
-import { fetchAllPics } from '../src/actions/picsActions'
-import { closeModal } from '../src/actions/modalActions'
+import { fetchAllPics } from '../actions/picsActions'
+import { closeModal } from '../actions/modalActions'
 //Components
 import Modal from './modal'
 //Styled componentsimport styled from "styled-components";

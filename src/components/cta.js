@@ -9,7 +9,7 @@ import { Section } from './styled/wrappers'
 import { media } from './styled/medias'
 import { flex } from './styled/flexes'
 //Actions
-import { fetchAllPics } from '../src/actions/picsActions'
+import { fetchAllPics } from '../actions/picsActions'
 
 export default class CTA extends React.Component {
   constructor(props) {
