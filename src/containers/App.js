@@ -1,4 +1,3 @@
-
 // Libs
 import React from "react"
 import ReactDOM from "react-dom"
@@ -6,27 +5,27 @@ import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 //Actions
-import * as modalActionCreators from "./src/actions/modalActions"
+import * as modalActionCreators from "../actions/modalActions"
 // Components
-import HeaderLarge from "./src/components/header"
-import Manifesto from "./src/components/manifesto"
-import Footer from "./src/components/footer"
-import Slider from "./src/components/slider_component"
-import CTA from "./src/components/cta"
-import Modal from "./src/components/modal"
-import SliderTop from "./src/components/slider-top"
-import MainNav from "./src/components/nav"
-import AllPics from "./src/components/allpics"
-import Blog from "./src/components/blog"
-import Article from "./src/components/article"
-import ContactPage from "./src/components/contactPage"
-import Icons from "./src/components/icons"
+import HeaderLarge from "../components/header"
+import Manifesto from "../components/manifesto"
+import Footer from "../components/footer"
+import Slider from "../components/slider_component"
+import CTA from "../components/cta"
+import Modal from "../components/modal"
+import SliderTop from "../components/slider-top"
+import MainNav from "../components/nav"
+import AllPics from "../components/allpics"
+import Blog from "../components/blog"
+import Article from "../components/article"
+import ContactPage from "../components/contactPage"
+import Icons from "../components/icons"
 // css
-import styles from './production/css/newstyle.css'
+import styles from '../css/newstyle.css'
 //Styled components
-import { Container_main, WrapperMax1100 } from './src/components/styled/wrappers'
+import { Container_main, WrapperMax1100 } from '../components/styled/wrappers'
 import { ThemeProvider } from 'styled-components'
-import { greenTheme } from './src/components/styled/themes'
+import { greenTheme } from '../components/styled/themes'
 
 @connect((store) => {
   return {
@@ -47,7 +46,6 @@ export default class App extends React.Component {
   showAllPics = () => {
     console.log(this.props.pics)
     if (this.props.pics)
-    // console.log(pics)
     this.renderAllPics(this.props.pics)
   }
 
