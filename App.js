@@ -51,14 +51,6 @@ export default class App extends React.Component {
     this.renderAllPics(this.props.pics)
   }
 
-  renderAllPics = () => {
-    return (
-      <AllPics
-        pics={ this.props.pics }
-        initialPics={ this.props.initialPics }
-       />
-    )
-  }
   renderMainNav = () => {
     return (
       <MainNav dispatch={ this.props.dispatch } />
@@ -72,27 +64,47 @@ export default class App extends React.Component {
 
   render() {
 
-    const closeModal = bindActionCreators(modalActionCreators.closeModal, this.props.dispatch)
-    const showModal = bindActionCreators(modalActionCreators.showModal, this.props.dispatch)
-    const showNextImg = bindActionCreators(modalActionCreators.showNextImg, this.props.dispatch)
-    const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, this.props.dispatch)
+    const { pics, initialPics, dispatch, nextImg, prevImg, modalPic,
+            modalVisibility } = this.props
+
+    const closeModal = bindActionCreators(modalActionCreators.closeModal, dispatch)
+    const showModal = bindActionCreators(modalActionCreators.showModal, dispatch)
+    const showNextImg = bindActionCreators(modalActionCreators.showNextImg, dispatch)
+    const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, dispatch)
 
 
     const renderSlider = () => {
       return (
         <Slider
           showPics={this.showAllPics.bind(this)}
-          pics={this.props.initialPics}
+          pics={ initialPics }
           showModal={ showModal }
           closeModal={ closeModal }
           showNextImg={ showNextImg }
           showPrevImg={ showPrevImg }
-          dispatch={ this.props.dispatch }
-          modalVisibility={ this.props.modalVisibility }
-          modalPic={ this.props.modalPic }
-          nextImg={ this.props.nextImg }
-          prevImg={ this.props.prevImg }
+          dispatch={ dispatch }
+          modalVisibility={ modalVisibility }
+          modalPic={ modalPic }
+          nextImg={ nextImg }
+          prevImg={ prevImg }
         />
+      )
+    }
+
+    const renderAllPics = () => {
+      return (
+        <AllPics
+          dispatch={ dispatch }
+          pics={ pics }
+          showModal={ showModal }
+          modalPic = { modalPic }
+          modalVisibility = { modalVisibility }
+          nextImg = { nextImg }
+          prevImg = { prevImg }
+          showNextImg = { showNextImg }
+          showPrevImg = { showPrevImg }
+          closeModal = { closeModal }
+         />
       )
     }
 
@@ -112,7 +124,7 @@ export default class App extends React.Component {
               <Route path="/about" component={Manifesto}/>
               <Route path="/blog" component={Blog}/>
               <Route path="/contact" component={ContactPage}/>
-              <Route path="/fotos" render={this.renderAllPics.bind(this)}/>
+              <Route path="/fotos" render={renderAllPics}/>
             </WrapperMax1100>
             <Route path="/" component={Footer}/>
           </Container_main>

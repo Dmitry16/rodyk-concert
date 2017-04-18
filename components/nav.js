@@ -71,8 +71,8 @@ export default class MainNav extends React.Component {
     return (
       <Wrapper>
           <ul>
-          <span className="icon-bars"></span>
-          <div className="list">
+          <span className='icon-bars'></span>
+          <div id='top' className='list'>
               <li>
                 <Link to='/'>Inicio</Link>
               </li>

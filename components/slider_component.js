@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { fetchAllPics } from '../src/actions/picsActions'
 import { closeModal } from '../src/actions/modalActions'
 //Components
-import Modal from "./modal"
+import Modal from './modal'
 //Styled componentsimport styled from "styled-components";
-import styled from "styled-components"
+import styled from 'styled-components'
 import { media } from './styled/medias'
 import { Title } from './styled/titles'
 import { Button } from './styled/buttons'
@@ -72,7 +72,7 @@ export default class Slider extends React.Component {
               prevImg = { prevImg }
               showNextImg = { showNextImg }
               showPrevImg = { showPrevImg }
-              closeModal = { closeModal }              
+              closeModal = { closeModal }
             />
 
             <wrprBtn id='wrprBtn'>

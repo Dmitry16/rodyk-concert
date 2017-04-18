@@ -15,14 +15,17 @@ class Modal extends React.Component {
       position: absolute;
       top: 0; left: 0;
       width: 100%;
+      height: auto;
       padding: 5% 0 10%;
     `
     const ModalImgWrapper = styled.div`
       width: 80%;
+      height: auto;
       position: relative;
     `
     const ModalImg = styled.img`
       width: 100%;
+      height: 100%;
     `
     const templ = `
       ${ flex.column }
