@@ -1,6 +1,6 @@
 module.exports = {
-  devtool: 'inline-sourcemap',  
-  entry: './index.js',
+  devtool: 'inline-sourcemap',
+  entry: './src/index.js',
 
   output: {
     publicPath: '/',
