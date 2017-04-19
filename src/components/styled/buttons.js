@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 import { media } from './medias'
 import { css } from 'styled-components'
 

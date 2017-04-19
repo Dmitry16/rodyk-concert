@@ -40,7 +40,6 @@ const initialState = {
 
 import * as picsActionTypes from '../actionTypes/picsActionTypes'
 
-
 export default function picsReducer(state=initialState, action) {
 
     switch (action.type) {

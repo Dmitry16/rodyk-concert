@@ -1,5 +1,5 @@
 // Libs
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
@@ -27,20 +27,26 @@ import { Container_main, WrapperMax1100 } from '../components/styled/wrappers'
 import { ThemeProvider } from 'styled-components'
 import { greenTheme } from '../components/styled/themes'
 
-@connect((store) => {
-  return {
-    initialPics: store.pics.initialPics,
-    pics: store.pics.pics,
-    modalVisibility: store.modal.modalVisibility,
-    modalPic: store.modal.modalPic,
-    nextImg: store.modal.nextImg,
-    prevImg: store.modal.prevImg,
-  }
-})
+// @connect((store) => {
+//   return {
+//     initialPics: store.pics.initialPics,
+//     pics: store.pics.pics,
+//     modalVisibility: store.modal.modalVisibility,
+//     modalPic: store.modal.modalPic,
+//     nextImg: store.modal.nextImg,
+//     prevImg: store.modal.prevImg,
+//   }
+// })
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props)
+class App extends Component {
+
+  static propTypes = {
+    initialPics: PropTypes.array.isRequired,
+    pics: PropTypes.array.isRequired,
+    modalVisibility: PropTypes.string.isRequired,
+    modalPic: PropTypes.string.isRequired,
+    nextImg: PropTypes.string.isRequired,
+    prevImg: PropTypes.string.isRequired
   }
 
   showAllPics = () => {
@@ -69,7 +75,6 @@ export default class App extends React.Component {
     const showModal = bindActionCreators(modalActionCreators.showModal, dispatch)
     const showNextImg = bindActionCreators(modalActionCreators.showNextImg, dispatch)
     const showPrevImg = bindActionCreators(modalActionCreators.showPrevImg, dispatch)
-
 
     const renderSlider = () => {
       return (
@@ -131,3 +136,16 @@ export default class App extends React.Component {
     )
   }
 }
+
+const mapStateToProps = store => (
+  {
+    initialPics: store.pics.initialPics,
+    pics: store.pics.pics,
+    modalVisibility: store.modal.modalVisibility,
+    modalPic: store.modal.modalPic,
+    nextImg: store.modal.nextImg,
+    prevImg: store.modal.prevImg,
+  }
+)
+
+export default connect(mapStateToProps)(App)

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-//styled componentsimport { H1, H3, Icon, P } from './styled/typographies'
 import styled from 'styled-components'
 
 //Form validation

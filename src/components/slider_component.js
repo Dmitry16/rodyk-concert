@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 //require ('./components/slider_core.js');
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
@@ -16,9 +16,19 @@ import { Button } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
 
-export default class Slider extends React.Component {
+export default class Slider extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+  }
+
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    showModal: PropTypes.func.isRequired,
+    pics: PropTypes.array.isRequired,
+    modalVisibility: PropTypes.string.isRequired,
+    modalPic: PropTypes.string.isRequired,
+    nextImg: PropTypes.string.isRequired,
+    prevImg: PropTypes.string.isRequired
   }
 
   showAllPics() {
@@ -45,15 +55,15 @@ export default class Slider extends React.Component {
         transform: scale(1.1);
       }
     `
-    const { nextImg, prevImg, modalPic, showNextImg,
-            showPrevImg, modalVisibility, closeModal } = this.props
+    const { nextImg, prevImg, modalPic, showNextImg, showPrevImg,
+            modalVisibility, showModal, closeModal } = this.props
 
     let pics = this.props.pics
     let pics_arr = pics.map((pic, id) => {
         return (
           <PicWrapper key={pic.id}>
             <Img src={pic.source_url} alt={pic.alt_text} className='albumPics'
-              onClick = {(e) => this.props.showModal(e)}/>
+              onClick = {(e) => showModal(e)}/>
           </PicWrapper>
         )
     })

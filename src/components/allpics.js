@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 //Components
 import Modal from './modal'
@@ -7,9 +7,17 @@ import styled from 'styled-components'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1, H3, Icon, P } from './styled/typographies'
 
-export default class AllPics extends React.Component {
+export default class AllPics extends Component {
   constructor(props) {
     super(props);
+  }
+
+  static propTypes = {
+    pics: PropTypes.array.isRequired,
+    modalVisibility: PropTypes.string.isRequired,
+    modalPic: PropTypes.string.isRequired,
+    nextImg: PropTypes.string.isRequired,
+    prevImg: PropTypes.string.isRequired
   }
 
   render() {
