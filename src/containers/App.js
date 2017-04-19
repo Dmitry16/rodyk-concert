@@ -45,8 +45,8 @@ class App extends Component {
     pics: PropTypes.array.isRequired,
     modalVisibility: PropTypes.string.isRequired,
     modalPic: PropTypes.string.isRequired,
-    nextImg: PropTypes.string.isRequired,
-    prevImg: PropTypes.string.isRequired
+    nextImg: PropTypes.string,
+    prevImg: PropTypes.string
   }
 
   showAllPics = () => {

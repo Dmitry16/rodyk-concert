@@ -21,7 +21,7 @@ export function getNextImg(actualPic) {
     if(actualPic === pics[i].getAttribute('src') && pics[i+1]) {
       return pics[i+1].getAttribute('src');
     } else if (!pics[i+1]) {
-      return false;
+      return '';
     }
   }
 }
@@ -29,16 +29,16 @@ export function getNextImg(actualPic) {
 export function showNextImg(nextImg, modalPic) {
   //here the next image becomes actual modal img (when fired the action)
   let actualImg = nextImg
-  let newNextImg = (getNextImg(actualImg))
+  let newNextImg = (getNextImg(actualImg)!== '')
                     ?
                       getNextImg(actualImg)
                     :
-                      false
+                      ''
   let newPrevImg = (modalPic)
                     ?
                       modalPic
                     :
-                      false
+                      ''
 
   if(actualImg && newNextImg) {
     return {type: modalActionTypes.SHOW_NEXT_IMG,
@@ -65,7 +65,7 @@ let pics = document.getElementsByClassName('albumPics')
       if(actualPic === pics[i].getAttribute('src') && pics[i-1]) {
         return pics[i-1].getAttribute('src');
       } else if (!pics[i-1]) {
-        return false;
+        return '';
       }
   }
 }
@@ -73,16 +73,16 @@ let pics = document.getElementsByClassName('albumPics')
 export function showPrevImg(prevImg, modalPic) {
   //here the next image becomes actual modal img (when fired the action)
   let actualImg = prevImg;
-  let newPrevImg = (getPrevImg(actualImg))
+  let newPrevImg = (getPrevImg(actualImg)!== '')
                     ?
                       getPrevImg(actualImg)
                     :
-                      false
+                      ''
   let newNextImg = (modalPic)
                     ?
                       modalPic
                     :
-                      false
+                      ''
 
   if(actualImg && newPrevImg) {
     return {type: modalActionTypes.SHOW_PREV_IMG,
