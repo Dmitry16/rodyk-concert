@@ -92,7 +92,6 @@ export default class Slider extends Component {
                 </Button>
               </Link>
             </wrprBtn>
-
         </Wrapper>
       </Section>
     )
