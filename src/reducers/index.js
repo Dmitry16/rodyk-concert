@@ -1,13 +1,10 @@
 import { combineReducers } from 'redux'
-// import { reducer as formReducer } from 'redux-form'
-import picsReducer from './pics'
-import modalReducer from './modal'
+import picsReducer from './picsReducer'
+import modalReducer from './modalReducer'
 import { reducer as formReducer } from 'redux-form'
 
-const reducer = combineReducers({
+export default combineReducers({
   pics: picsReducer,
   modal: modalReducer,
   form: formReducer,
 })
-
-export default reducer
