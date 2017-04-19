@@ -1,25 +1,25 @@
 // Libs
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link, Match, Miss, Switch } from 'react-router-dom'
-import { connect } from "react-redux"
-import { bindActionCreators } from "redux"
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 //Actions
-import * as modalActionCreators from "../actions/modalActions"
+import * as modalActionCreators from '../actions/modalActions'
 // Components
-import HeaderLarge from "../components/header"
-import Manifesto from "../components/manifesto"
-import Footer from "../components/footer"
-import Slider from "../components/slider_component"
-import CTA from "../components/cta"
-import Modal from "../components/modal"
-import SliderTop from "../components/slider-top"
-import MainNav from "../components/nav"
-import AllPics from "../components/allpics"
-import Blog from "../components/blog"
-import Article from "../components/article"
-import ContactPage from "../components/contactPage"
-import Icons from "../components/icons"
+import HeaderLarge from '../components/header'
+import Manifesto from '../components/manifesto'
+import Footer from '../components/footer'
+import Slider from '../components/slider_component'
+import CTA from '../components/cta'
+import Modal from '../components/modal'
+import SliderTop from '../components/slider-top'
+import MainNav from '../components/nav'
+import AllPics from '../components/allpics'
+import Blog from '../components/blog'
+import Article from '../components/article'
+import ContactPage from '../components/contactPage'
+import Icons from '../components/icons'
 // css
 import styles from '../css/newstyle.css'
 //Styled components
@@ -110,21 +110,21 @@ export default class App extends React.Component {
       <Router>
         <ThemeProvider theme={ greenTheme }>
           <Container_main>
-            <Route path="/" component={HeaderLarge}/>
+            <Route path='/' component={HeaderLarge}/>
             <WrapperMax1100>
-              <Route path="/" render={this.renderMainNav.bind(this)}/>
-              <Route exact={true} path="/" component={SliderTop}/>
-              <Route exact={true} path="/" component={Manifesto}/>
-              <Route exact={true} path="/" render={this.renderCTA.bind(this)}/>
-              <Route exact={true} path="/" component={Icons}/>
-              <Route exact={true} path="/" render={renderSlider}/>
-              <Route exact={true} path="/" component={Blog}/>
-              <Route path="/about" component={Manifesto}/>
-              <Route path="/blog" component={Blog}/>
-              <Route path="/contact" component={ContactPage}/>
-              <Route path="/fotos" render={renderAllPics}/>
+              <Route path='/' render={this.renderMainNav.bind(this)}/>
+              <Route exact={true} path='/' component={SliderTop}/>
+              <Route exact={true} path='/' component={Manifesto}/>
+              <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
+              <Route exact={true} path='/' component={Icons}/>
+              <Route exact={true} path='/' render={renderSlider}/>
+              <Route exact={true} path='/' component={Blog}/>
+              <Route path='/about' component={Manifesto}/>
+              <Route path='/blog' component={Blog}/>
+              <Route path='/contact' component={ContactPage}/>
+              <Route path='/fotos' render={renderAllPics}/>
             </WrapperMax1100>
-            <Route path="/" component={Footer}/>
+            <Route path='/' component={Footer}/>
           </Container_main>
         </ThemeProvider>
       </Router>

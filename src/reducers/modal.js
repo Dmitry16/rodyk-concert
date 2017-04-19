@@ -1,12 +1,15 @@
-export default function modalReducer(state={
-  modalVisibility: 'hidden',
-  modalPic: '',
-  nextImg: '',
-  prevImg: '',
-}, action) {
+import * as modalActionTypes from '../actionTypes/modalActionTypes'
 
+export default function modalReducer(
+  state={
+      modalVisibility: 'hidden',
+      modalPic: '',
+      nextImg: '',
+      prevImg: '',
+    },
+  action) {
     switch (action.type) {
-      case "SHOW_MODAL": {
+      case modalActionTypes.SHOW_MODAL: {
         return {
           ...state,
           modalVisibility: 'visible',
@@ -15,7 +18,7 @@ export default function modalReducer(state={
           prevImg: action.payload[2],
         }
       }
-      case "SHOW_PREV_IMG": {
+      case modalActionTypes.SHOW_PREV_IMG: {
         return {
           ...state,
           modalPic: action.payload[0],
@@ -23,7 +26,7 @@ export default function modalReducer(state={
           prevImg: action.payload[2],
         }
       }
-      case "SHOW_NEXT_IMG": {
+      case modalActionTypes.SHOW_NEXT_IMG: {
         return {
           ...state,
           modalPic: action.payload[0],
@@ -31,7 +34,7 @@ export default function modalReducer(state={
           prevImg: action.payload[2],
         }
       }
-      case "CLOSE_MODAL": {
+      case modalActionTypes.CLOSE_MODAL: {
         return {
           ...state,
           modalVisibility: 'hidden',
