@@ -1,0 +1,3 @@
+export const FETCH_PICS = 'pics/FETCH_PICS'
+export const FETCH_PICS_REJECTED = 'pics/FETCH_PICS_REJECTED'
+export const FETCH_PICS_FULFILLED = 'pics/FETCH_PICS_FULFILLED'

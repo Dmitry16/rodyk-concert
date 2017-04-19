@@ -29,25 +29,28 @@ const initialPics = [
     source_url:"http://receptum-in-natura.solutecs.biz/wp-content/uploads/sites/22/2017/03/17.jpeg",
     alt_text:"anunnaki"
   }
-];
+]
 const initialState = {
     initialPics: initialPics,
     pics: [...initialPics],
     fetching: false,
     fetched: false,
     error: null,
-  };
+  }
+
+import * as picsActionTypes from '../actionTypes/picsActionTypes'
+
 
 export default function picsReducer(state=initialState, action) {
 
     switch (action.type) {
-      case "FETCH_PICS": {
+      case picsActionTypes.FETCH_PICS: {
         return {...state, fetching: true}
       }
-      case "FETCH_PICS_REJECTED": {
+      case picsActionTypes.FETCH_PICS_REJECTED: {
         return {...state, fetching: false, error: action.payload}
       }
-      case "FETCH_PICS_FULFILLED": {
+      case picsActionTypes.FETCH_PICS_FULFILLED: {
         return {
           ...state,
           fetching: false,
