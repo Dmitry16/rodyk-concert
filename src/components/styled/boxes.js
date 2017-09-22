@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 import { media } from './medias'
 import { flex } from './flexes'
 import { truncate } from './utiles'
