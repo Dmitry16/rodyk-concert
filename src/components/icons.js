@@ -50,8 +50,10 @@ class Icons extends React.Component {
 
   render() {
     return (
-      <Section>
-        <H1>Nuestros Intereses y Hobbies</H1>
+      <Section style={{border:'none'}}>
+        <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(200,0,0,0.4)'}}>
+          <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.5)',color:'#ffff55'}}>Nuestros servicios</H1>
+        </div>
         <div className="icons-wrapper">
           {icons.map((icon,id) =>
             <Icon

@@ -12,7 +12,6 @@ export default class Blog extends React.Component {
   render() {
 
     const Box = styled.div`
-       border: 1px solid #fff;
        margin: 3% 3%;
        padding: 3%;
        background: rgba(255, 255, 255, .2);

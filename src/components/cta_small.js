@@ -11,7 +11,7 @@ import { flex } from './styled/flexes'
 //Actions
 import { fetchAllPics } from '../actions/picsActions'
 
-export default class CTA extends React.Component {
+export default class CTA_Small extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,18 +22,19 @@ export default class CTA extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: mediumseagreen;
+      width: 50%;
+
       text-align: center;
       border: none;
       ${ flex.column }
     `
     const BoxCTA = styled.div`
 
-      background: mediumseagreen;
+      background:  rgba(50,50,180,0.7);;
       text-align: center;
-      margin: 0;
-      padding: 0;
+      margin-left: 40px;
       width: 100%;
+      height: 7em;
       > a { width: 33.3%;
         display: flex;
         justify-content: center;
@@ -55,17 +56,17 @@ export default class CTA extends React.Component {
         `};
     `
     const ButtonCTA = styled.button`
-
+      z-index: 9;
       width: 80%;
       height: 4em;
-      margin: 0;
+      margin-top: 50px;
       padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
       border: 2px solid #fff;
-      background: mediumseagreen;
+      background: rgba(180,50,50,0.5) !important;
       cursor: pointer;
       &:hover {
-        background: lightgreen;
-        color: red;
+        background: rgba(180,50,50,0.9) !important;
+        color: #ffff55 !important;
       }
       ${ media.desktop`
         padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
@@ -81,18 +82,13 @@ export default class CTA extends React.Component {
       `}
       `
     return (
-      <Section style={{marginTop:'-10%'}}>
+      <Section style={{marginTop:'-400px',marginLeft:'70px',marginRight:'-30px'}}>
         <Wrapper className="cta">
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className="cta-buttons-wrapper">
-            <Link to="/fotos"><ButtonCTA className="cta-button">
-            Conocer quien somos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button">
-            Saber que ofrecemos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button"
-                                onClick={this.showPics.bind(this)}>
-              Ver las fotos</ButtonCTA>
-            </Link>
+            <Link to="/fotos"><ButtonCTA className="cta-button" style={{position:'relative',width:'15em',
+              top:'3em',left:'-30em'}}>
+            Ver Conciertos</ButtonCTA></Link>
           </BoxCTA>
         </Wrapper>
       </Section>

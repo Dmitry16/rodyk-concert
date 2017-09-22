@@ -4,8 +4,7 @@ import { css } from 'styled-components'
 
 export const Button = styled.button`
   padding: ${props => props.small ? '0 0.5em' : '1.5em 8em'};
-  border: 2px solid #fff;
-  background: mediumseagreen;
+  background: rgba(0,0,200,0.5);
   margin-top: 0;
   cursor: pointer;
   &:hover {

@@ -17,7 +17,7 @@ import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1 } from './styled/typographies'
 
-export default class Slider extends Component {
+export default class Events extends Component {
   constructor(props) {
     super(props)
   }
@@ -40,11 +40,12 @@ export default class Slider extends Component {
 
     const Wrapper = styled.div`
       position: relative;
-      > #wrprBtn { margin: 5%;
+      > #wrprBtn { margin: 5%; border: none;
         }
     `
     const wrprBtn = styled.div`
       z-index: 9;
+      border: none;
       &:hover { box-shadow: 5px 5px 10px black; }
     `
     const Img = styled.img`
@@ -70,10 +71,10 @@ export default class Slider extends Component {
     })
 
     return (
-      <Section>
+      <Section style={{border:'none',margin:'13% auto'}}>
       <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(200,0,0,0.4)'}}>
         <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.5)',color:'#ffff55'}}>
-        Album de Fotos</H1>
+        Eventos</H1>
       </div>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">
 
@@ -89,11 +90,12 @@ export default class Slider extends Component {
               closeModal = { closeModal }
             />
 
-            <wrprBtn id='wrprBtn'>
-              <Link to="/fotos">
+            <wrprBtn id='wrprBtn' style={{border:'none'}}>
+              <Link to="/fotos" style={{border:'none'}}>
                 <Button
+                  style={{border:'none'}}
                   onClick={this.showAllPics.bind(this)}>
-                  Ver todas fotos
+                  Todos Eventos
                 </Button>
               </Link>
             </wrprBtn>

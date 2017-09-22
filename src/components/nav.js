@@ -21,7 +21,9 @@ export default class MainNav extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: steelblue;
+      position: relative;
+      z-index: 9 !important;
+      background: rgba(0,0,200,0.5);
       margin: 0;
       > ul {
         font-size: 1em;
@@ -33,8 +35,8 @@ export default class MainNav extends React.Component {
         > div { ${ flex.row }
           > li { width: 15%; padding: 0.2em 0;
               > a { color: khaki; }
-            &:hover { background: coral;
-              > a { color: steelblue; }
+            &:hover { background: #ffff55;
+              > a { color: blue; }
             }
           }
         }
@@ -77,7 +79,10 @@ export default class MainNav extends React.Component {
                 <Link to='/'>Inicio</Link>
               </li>
               <li>
-                <Link to='/about'>Manifesto</Link>
+                <Link to='/about'>Programación</Link>
+              </li>
+              <li>
+                <Link to='/about'>Servicios</Link>
               </li>
               <li>
                 <Link to='/fotos'>

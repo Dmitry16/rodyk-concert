@@ -8,9 +8,26 @@ class HeaderLarge extends React.Component {
   }
 
   render() {
+    const Logo = styled.div`
+      padding: 0;
+      z-index: 9;
+      margin-left: 40px;
+    `
+    const Img = styled.img`
+      width: 150px;
+      height: 150px;
+      margin: 0;
+    `
+    const HeaderImg = styled.img`
+      position: absolute;
+      width: auto;
+      height: auto;
+      margin: 0;
+      z-index: 0;
+    `
     const Wrapper = styled.div`
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       width: 100%;
       padding: 2%;
@@ -41,8 +58,11 @@ class HeaderLarge extends React.Component {
 
     return (
       <Wrapper>
-        <p className="icon-apple"></p>
-        <h1 className="site-title">Receptum in Natura</h1>
+        <HeaderImg src='./assets/img/rodyk-concert/header1.jpg' />
+        <Logo>
+          <Img src='./assets/img/rodyk_logo.jpg' />
+        </Logo>
+        <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
       </Wrapper>
     )
   }

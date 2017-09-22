@@ -11,6 +11,8 @@ import HeaderLarge from '../components/header'
 import Manifesto from '../components/manifesto'
 import Footer from '../components/footer'
 import Slider from '../components/slider_component'
+import Events from '../components/events'
+import CTA_Small from '../components/cta_small'
 import CTA from '../components/cta'
 import Modal from '../components/modal'
 import SliderTop from '../components/slider-top'
@@ -60,6 +62,11 @@ class App extends Component {
       <MainNav dispatch={ this.props.dispatch } />
     )
   }
+  renderCTA_Small = () => {
+    return (
+      <CTA_Small dispatch={ this.props.dispatch } />
+    )
+  }
   renderCTA = () => {
     return (
       <CTA dispatch={ this.props.dispatch } />
@@ -93,6 +100,23 @@ class App extends Component {
         />
       )
     }
+    const renderEvents = () => {
+      return (
+        <Events
+          showPics={this.showAllPics.bind(this)}
+          pics={ initialPics }
+          showModal={ showModal }
+          closeModal={ closeModal }
+          showNextImg={ showNextImg }
+          showPrevImg={ showPrevImg }
+          dispatch={ dispatch }
+          modalVisibility={ modalVisibility }
+          modalPic={ modalPic }
+          nextImg={ nextImg }
+          prevImg={ prevImg }
+        />
+      )
+    }
 
     const renderAllPics = () => {
       return (
@@ -111,6 +135,8 @@ class App extends Component {
       )
     }
 
+              // <Route exact={true} path='/' component={Manifesto}/>
+
     return (
       <Router>
         <ThemeProvider theme={ greenTheme }>
@@ -119,7 +145,8 @@ class App extends Component {
             <WrapperMax1100>
               <Route path='/' render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path='/' component={SliderTop}/>
-              <Route exact={true} path='/' component={Manifesto}/>
+              <Route exact={true} path='/' render={this.renderCTA_Small.bind(this)}/>
+              <Route exact={true} path='/' render={renderEvents}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
               <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
