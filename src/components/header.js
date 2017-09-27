@@ -60,7 +60,7 @@ class HeaderLarge extends React.Component {
       <Wrapper>
         <HeaderImg src='./assets/img/rodyk-concert/header1.jpg' />
         <Logo>
-          <Img src='./assets/img/rodyk_logo.jpg' />
+          <Img src='./assets/img/rodyk-concert/rodyk_logo.jpg' />
         </Logo>
         <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
       </Wrapper>
