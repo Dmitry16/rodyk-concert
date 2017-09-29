@@ -22,17 +22,19 @@ export default class CTA extends React.Component {
 
   render() {
     const Wrapper = styled.div`
-      background: mediumseagreen;
+      width: 100%;
+      background: steelblue;
       text-align: center;
       border: none;
       ${ flex.column }
     `
     const BoxCTA = styled.div`
-
-      background: mediumseagreen;
+      display: flex;
+      justify-content: center;
+      background: none;
       text-align: center;
       margin: 0;
-      padding: 0;
+      padding: 0 0 5%;
       width: 100%;
       > a { width: 33.3%;
         display: flex;
@@ -60,12 +62,12 @@ export default class CTA extends React.Component {
       height: 4em;
       margin: 0;
       padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
-      border: 2px solid #fff;
-      background: mediumseagreen;
+      border: 1px solid #fff;
+      background: rgba(250,0,0,0.3);
       cursor: pointer;
       &:hover {
-        background: lightgreen;
-        color: red;
+        background: rgba(250,0,0,0.5);
+        color: khaki;
       }
       ${ media.desktop`
         padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
@@ -81,15 +83,15 @@ export default class CTA extends React.Component {
       `}
       `
     return (
-      <Section style={{marginTop:'-10%'}}>
+      <Section style={{marginTop:'-10%', border:'none'}}>
         <Wrapper className="cta">
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
-          <BoxCTA className="cta-buttons-wrapper">
-            <Link to="/fotos"><ButtonCTA className="cta-button">
+          <BoxCTA>
+            <Link to="/fotos"><ButtonCTA>
             Conocer quien somos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button">
+            <Link to="/fotos"><ButtonCTA>
             Saber que ofrecemos</ButtonCTA></Link>
-            <Link to="/fotos"><ButtonCTA className="cta-button"
+            <Link to="/fotos"><ButtonCTA
                                 onClick={this.showPics.bind(this)}>
               Ver las fotos</ButtonCTA>
             </Link>

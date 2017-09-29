@@ -30,10 +30,10 @@ class SliderTop extends React.Component {
 		return (
 			<Section style={{marginTop: '5%'}}>
 				<Wrapper>
-					<Img src='./assets/img/rodyk-concert/sinoptik1.jpg' alt='xxx' className="slider-img in" />
-					<Img src='./assets/img/rodyk-concert/sinoptik2.jpg' alt='xxx' className="slider-img out" />
-					<Img src='./assets/img/rodyk-concert/somali_yacht_club.jpg' alt='xxx' className="slider-img out" />
-					<Img src='./assets/img/rodyk-concert/somali_yacht_club2.jpg' alt='kuku' className="slider-img out" />
+					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/sinoptik1.jpg' alt='xxx' className="slider-img in" />
+					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/sinoptik2.jpg' alt='zzz' className="slider-img out" />
+					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/somali_yacht_club.jpg' alt='aaa' className="slider-img out" />
+					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/somali_yacht_club2.jpg' alt='kuku' className="slider-img out" />
 				</Wrapper>
 			</Section>
 		)

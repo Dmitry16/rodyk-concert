@@ -8,6 +8,8 @@ export const greenTheme = {
   hoverColor: '#aee8a7',
   primaryTextColor: 'steelblue',
 
+  fontFamily: 'Gloria Hallelujah',
+
   h1FontSize: '38px',
   h1FontWeight: '300',
   h3FontSize: '28px',

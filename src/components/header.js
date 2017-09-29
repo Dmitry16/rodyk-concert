@@ -58,9 +58,9 @@ class HeaderLarge extends React.Component {
 
     return (
       <Wrapper>
-        <HeaderImg src='./assets/img/rodyk-concert/header1.jpg' />
+        <HeaderImg src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/header1.jpg' />
         <Logo>
-          <Img src='./assets/img/rodyk-concert/rodyk_logo.jpg' />
+          <Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/rodyk_logo.jpg' />
         </Logo>
         <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
       </Wrapper>

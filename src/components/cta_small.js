@@ -82,7 +82,7 @@ export default class CTA_Small extends React.Component {
       `}
       `
     return (
-      <Section style={{marginTop:'-400px',marginLeft:'70px',marginRight:'-30px'}}>
+      <Section style={{marginTop:'-400px',marginLeft:'30px',marginRight:'0px'}}>
         <Wrapper className="cta" style={{background:'none'}}>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className="cta-buttons-wrapper" style={{background:'none'}}>
