@@ -23,7 +23,7 @@ export default class LNG extends React.Component {
       width: 100%;
       background: 'none';
       text-align: center;
-      border: none;
+      border: none !important;
       ${ flex.column }
     `
     const BoxLNG = styled.div`
@@ -32,8 +32,7 @@ export default class LNG extends React.Component {
       background: none;
       text-align: center;
       margin: 0;
-      padding: 0 0;
-      width: 100%;
+      border: none !important;
       > a { width: 33.3%;
         display: flex;
         justify-content: center;
@@ -51,24 +50,24 @@ export default class LNG extends React.Component {
         width: 100%;
         `};
       ${ media.desktop`
-        width: 100%;
+        width: auto;
         `};
     `
     const ButtonLNG = styled.button`
 
       width: 100%;
       height: 4em;
-      margin: 0;
-      padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
+      padding: ${props => props.small ? '0 0.5em' : '0.1em 1em'};
       border: 1px solid #fff;
-      background: rgba(250,0,0,0.3);
+      background: rgba(0,0,0,0.3);
       cursor: pointer;
       &:hover {
         background: rgba(250,0,0,0.5);
         color: khaki;
       }
       ${ media.desktop`
-        padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
+        padding: ${props => props.small ? '0 0.5em' : '0.5 1em'};
+        margin: 0 1em;
       `}
       ${ media.tablet`
         width: 90%;

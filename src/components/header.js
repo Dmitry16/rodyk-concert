@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { media } from './styled/medias'
+//Components
 import LNG from './lang'
+// import LNG from './lang'
 
 class HeaderLarge extends React.Component {
   constructor() {
