@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { media } from './styled/medias'
+import LNG from './lang'
 
 class HeaderLarge extends React.Component {
   constructor() {
@@ -63,6 +64,7 @@ class HeaderLarge extends React.Component {
           <Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/rodyk_logo.jpg' />
         </Logo>
         <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
+        <LNG />
       </Wrapper>
     )
   }
