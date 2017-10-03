@@ -16,17 +16,10 @@ class HeaderLarge extends React.Component {
       z-index: 9;
       margin-left: 40px;
     `
-    const Img = styled.img`
+    const LogoImg = styled.img`
       width: 150px;
       height: 150px;
       margin: 0;
-    `
-    const HeaderImg = styled.img`
-      position: absolute;
-      width: auto;
-      height: auto;
-      margin: 0;
-      z-index: 0;
     `
     const Wrapper = styled.div`
       display: flex;
@@ -34,8 +27,6 @@ class HeaderLarge extends React.Component {
       align-items: center;
       width: 100%;
       padding: 2%;
-      max-width: 100%;
-      background: ${ props => props.theme.headerBG || 'mediumseagreen' }
       height: 14em;
       > p, h1 {
         font-size: 4em; padding: 0; margin: 0;
@@ -61,9 +52,8 @@ class HeaderLarge extends React.Component {
 
     return (
       <Wrapper>
-        <HeaderImg src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/header1.jpg' />
         <Logo>
-          <Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/rodyk_logo.jpg' />
+          <LogoImg src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/rodyk_logo.jpg' />
         </Logo>
         <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
         <LNG />

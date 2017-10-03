@@ -1,7 +1,7 @@
 import { media } from './medias'
 
 export const greenTheme = {
-  headerBG: 'rgba(0,0,0,0.5)',
+  //headerBG: 'rgba(0,0,0,0.5)',
   headerTextColor: 'steelblue',
   headerFont: 'steelblue',
   bodyBG: '#000022',

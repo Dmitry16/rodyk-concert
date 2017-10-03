@@ -8,7 +8,8 @@ export const Container_main = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 !important;
-  background: ${ props => props.theme.bodyBG };
+  background: url('http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/header1.jpg') fixed;
+
   ${mediaQ.giant`padding: 0`};
   ${mediaQ.desktop`padding: 0`};
   ${mediaQ.tablet`padding: 0 5px`};
