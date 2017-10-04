@@ -21,7 +21,8 @@ class Footer extends React.Component {
       flex-direction: column;
       align-items: center;
       margin: 0;
-      border: 2px solid #fff;
+      border: none;
+      background: rgba(0,0,200,0.6) !important;
     `
     return (
       <Footer className="footer" role="contentinfo">

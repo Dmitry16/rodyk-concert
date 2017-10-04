@@ -72,7 +72,7 @@ export default class Events extends Component {
 
     return (
       <Section style={{border:'none',margin:'13% auto'}}>
-      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.8)'}}>
+      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.6)'}}>
         <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.8)',color:'#ffff55'}}>
         Eventos</H1>
       </div>
@@ -93,7 +93,7 @@ export default class Events extends Component {
             <wrprBtn id='wrprBtn' style={{border:'none'}}>
               <Link to="/fotos" style={{border:'none'}}>
                 <Button
-                  style={{border:'none'}}
+                  style={{border:'none',background:'rgba(250,0,0,0.3)'}}
                   onClick={this.showAllPics.bind(this)}>
                   Todos Eventos
                 </Button>

@@ -71,7 +71,7 @@ export default class Slider extends Component {
 
     return (
       <Section>
-      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.8)'}}>
+      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.6)'}}>
         <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.8)',color:'#ffff55'}}>
         Album de Fotos</H1>
       </div>
@@ -89,11 +89,12 @@ export default class Slider extends Component {
               closeModal = { closeModal }
             />
 
-            <wrprBtn id='wrprBtn'>
-              <Link to="/fotos">
+            <wrprBtn id='wrprBtn' style={{border:'none'}}>
+              <Link to="/fotos" style={{border:'none'}}>
                 <Button
+                  style={{border:'none',background:'rgba(250,0,0,0.3)'}}
                   onClick={this.showAllPics.bind(this)}>
-                  Ver todas fotos
+                  Todas Fotos
                 </Button>
               </Link>
             </wrprBtn>

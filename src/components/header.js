@@ -21,7 +21,7 @@ class HeaderLarge extends React.Component {
       margin: 0;
     `
     const Wrapper = styled.div`
-      background: rgba(0,0,200,0.6)
+      background: rgba(0,0,200,0.6);
       display: flex;
       flex-direction: row;
       align-items: center;

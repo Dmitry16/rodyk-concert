@@ -61,12 +61,12 @@ export default class CTA_Small extends React.Component {
       margin-top: 50px;
       padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
       border: none;
-      background: rgba(255,255,50,0.7) !important;
+      background: rgba(250,0,0,0.3) !important;
       cursor: pointer;
       color: steelblue;
       &:hover {
-        background: rgba(255,255,50,0.9) !important;
-        color: blue !important;
+        background: rgba(250,0,0,0.5) !important;
+        color: khaki !important;
       }
       ${ media.desktop`
         padding: ${props => props.small ? '0 0.5em' : '1em 4em'};

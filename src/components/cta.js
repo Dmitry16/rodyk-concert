@@ -23,7 +23,7 @@ export default class CTA extends React.Component {
   render() {
     const Wrapper = styled.div`
       width: 100%;
-      background: steelblue;
+      background: rgba(0,0,200,0.6);
       text-align: center;
       border: none;
       ${ flex.column }
