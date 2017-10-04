@@ -14,7 +14,6 @@ class HeaderLarge extends React.Component {
     const Logo = styled.div`
       padding: 0;
       z-index: 9;
-      margin-left: 40px;
     `
     const LogoImg = styled.img`
       width: 150px;
@@ -26,7 +25,7 @@ class HeaderLarge extends React.Component {
       flex-direction: row;
       align-items: center;
       width: 100%;
-      padding: 2%;
+      padding: 0;
       height: 14em;
       > p, h1 {
         font-size: 4em; padding: 0; margin: 0;

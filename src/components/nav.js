@@ -24,7 +24,7 @@ export default class MainNav extends React.Component {
       position: relative;
       z-index: 9 !important;
       background: rgba(0,0,200,0.5);
-      margin: 0;
+      margin: -50px auto 80px;
       > ul {
         font-size: 1em;
         text-align: center;
@@ -80,9 +80,6 @@ export default class MainNav extends React.Component {
               </li>
               <li>
                 <Link to='/about'>Programación</Link>
-              </li>
-              <li>
-                <Link to='/about'>Servicios</Link>
               </li>
               <li>
                 <Link to='/fotos'>

@@ -141,14 +141,13 @@ class App extends Component {
       <Router>
         <ThemeProvider theme={ greenTheme }>
           <Container_main>
-            <Route path='/' component={HeaderLarge}/>
             <WrapperMax1100>
+              <Route path='/' component={HeaderLarge}/>            
               <Route path='/' render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path='/' component={SliderTop}/>
               <Route exact={true} path='/' render={this.renderCTA_Small.bind(this)}/>
               <Route exact={true} path='/' render={renderEvents}/>
               <Route exact={true} path='/' render={this.renderCTA.bind(this)}/>
-              <Route exact={true} path='/' component={Icons}/>
               <Route exact={true} path='/' render={renderSlider}/>
               <Route exact={true} path='/' component={Blog}/>
               <Route path='/about' component={Manifesto}/>

@@ -12,6 +12,7 @@ class SliderTop extends React.Component {
 				position: relative;
   			min-height: 25em;
   			overflow: hidden;
+				margin: 0 10% 0;
 				${ media.desktop`
   				min-height: 25em;
 			  ` };
@@ -25,10 +26,10 @@ class SliderTop extends React.Component {
 			const Img = styled.img`
 				max-width: 100%;
 				max-heigth: 100%;
-				margin: 0;
+				margin: 0 auto;
 			`
 		return (
-			<Section style={{marginTop: '5%'}}>
+			<Section style={{border: 'none',background: 'rgba(0,0,0,0.9)',margin: '5% auto 10%'}}>
 				<Wrapper>
 					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/sinoptik1.jpg' alt='xxx' className="slider-img in" />
 					<Img src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/sinoptik2.jpg' alt='zzz' className="slider-img out" />
