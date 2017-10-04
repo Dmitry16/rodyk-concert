@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import styled from 'styled-components'
-import { TitleCTA } from './styled/titles'
 import { Button, ButtonCTA } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section } from './styled/wrappers'
@@ -23,7 +22,6 @@ export default class CTA_Small extends React.Component {
   render() {
     const Wrapper = styled.div`
       width: 50%;
-
       text-align: center;
       border: none;
       ${ flex.column }
@@ -60,12 +58,14 @@ export default class CTA_Small extends React.Component {
       height: 4em;
       margin-top: 50px;
       padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
-      border: none;
-      background: rgba(250,0,0,0.3) !important;
+      border: 1px solid #ddd;
+      font-family: 'Ultra' !important;
+      font-weight: 100 !important;
+      background: rgba(250,0,0,0.5) !important;
       cursor: pointer;
       color: steelblue;
       &:hover {
-        background: rgba(250,0,0,0.5) !important;
+        background: rgba(250,0,0,0.8) !important;
         color: khaki !important;
       }
       ${ media.desktop`
@@ -84,7 +84,6 @@ export default class CTA_Small extends React.Component {
     return (
       <Section style={{border:'none',background:'none',marginTop:'-400px',marginLeft:'30px',marginRight:'0px'}}>
         <Wrapper className="cta" style={{background:'none'}}>
-          <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
           <BoxCTA className='cta-buttons-wrapper'>
             <Link to="/fotos">
               <ButtonCTA>Ver Programación</ButtonCTA>

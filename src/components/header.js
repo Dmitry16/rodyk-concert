@@ -21,7 +21,7 @@ class HeaderLarge extends React.Component {
       margin: 0;
     `
     const Wrapper = styled.div`
-      background: rgba(0,0,200,0.6);
+      background: rgba(0,0,100,0.6);
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -36,7 +36,7 @@ class HeaderLarge extends React.Component {
         > p, h1 {
           font-size: 4em; padding: 0; margin: 0;
         }
-        > h1 {background: rgba(0,0,200,0.6) !important;
+        > h1 {background: rgba(0,0,200,0.5) !important;
               }`};
       ${ media.tablet`height: 9em;
         > p, h1 {

@@ -3,7 +3,8 @@ html {
   padding: 0;
 }
 body, h1, h2, h3, h4, h5, h6, a, input, textarea, button[type="submit"] {
-  font-family: 'Exo' !important;
+  font-family: 'Ultra' !important;
+  font-weight: 100 !important;
 }
 body {
   background: #fda !important;
