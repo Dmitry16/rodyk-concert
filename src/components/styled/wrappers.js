@@ -20,9 +20,9 @@ export const WrapperMax1100 = styled.div`
   max-width: 1100px;
 `
 export const Section = styled.section`
-  border: 2px solid #fff;
+  border: none;
   margin: 0 0 5%;
-  background: rgba(#fff, 0.3);
+  background: rgba(0,0,100,0.6);
   text-align: center;
 `
 export const PicWrapper = styled.div`

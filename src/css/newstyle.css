@@ -18,10 +18,10 @@ a {
 h1.site-title {
   width: 100%;
   text-align: center;
-  padding: 0;
+  padding: 3%;
   margin: 0;
   background: rgba(180,50,50,0.5);
-  color: #ffff55;
+  color: rgb(255,255,50);
 }
 .icon, .header-logo-title,
 .all_pics_section {

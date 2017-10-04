@@ -21,20 +21,23 @@ class HeaderLarge extends React.Component {
       margin: 0;
     `
     const Wrapper = styled.div`
+      background: rgba(0,0,200,0.6)
       display: flex;
       flex-direction: row;
       align-items: center;
       width: 100%;
-      padding: 0;
+      margin: 1% 0;
       height: 14em;
       > p, h1 {
-        font-size: 4em; padding: 0; margin: 0;
+        font-size: 4em;
         color: ${ props => props.theme.headerTextColor || 'coral' }
         }
       ${ media.desktop`height: 12em;
         > p, h1 {
           font-size: 4em; padding: 0; margin: 0;
-        }`};
+        }
+        > h1 {background: rgba(0,0,200,0.6) !important;
+              }`};
       ${ media.tablet`height: 9em;
         > p, h1 {
           font-size: 3em; padding: 0; margin: 0;
@@ -54,8 +57,8 @@ class HeaderLarge extends React.Component {
         <Logo>
           <LogoImg src='http://solutecs.biz/wp-content/themes/rodyk/assets/img/rodyk-concert/rodyk_logo.jpg' />
         </Logo>
-        <h1 className="site-title" style={{zIndex:'9'}}>Rodyk Concert</h1>
-        <LNG />
+        <h1 className="site-title">Rodyk Concert</h1>
+
       </Wrapper>
     )
   }

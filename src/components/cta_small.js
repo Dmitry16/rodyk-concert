@@ -29,8 +29,7 @@ export default class CTA_Small extends React.Component {
       ${ flex.column }
     `
     const BoxCTA = styled.div`
-
-      background:  rgba(50,50,180,0.7);;
+      background: none;
       text-align: center;
       margin-left: 40px;
       width: 100%;
@@ -61,12 +60,13 @@ export default class CTA_Small extends React.Component {
       height: 4em;
       margin-top: 50px;
       padding: ${props => props.small ? '0 0.5em' : '1em 5em'};
-      border: 2px solid #fff;
-      background: rgba(180,50,50,0.5) !important;
+      border: none;
+      background: rgba(255,255,50,0.7) !important;
       cursor: pointer;
+      color: steelblue;
       &:hover {
-        background: rgba(180,50,50,0.9) !important;
-        color: #ffff55 !important;
+        background: rgba(255,255,50,0.9) !important;
+        color: blue !important;
       }
       ${ media.desktop`
         padding: ${props => props.small ? '0 0.5em' : '1em 4em'};
@@ -82,12 +82,13 @@ export default class CTA_Small extends React.Component {
       `}
       `
     return (
-      <Section style={{border: 'none',marginTop:'-400px',marginLeft:'30px',marginRight:'0px'}}>
+      <Section style={{border:'none',background:'none',marginTop:'-400px',marginLeft:'30px',marginRight:'0px'}}>
         <Wrapper className="cta" style={{background:'none'}}>
           <TitleCTA>Que te apetece hacer ahora?</TitleCTA>
-          <BoxCTA className="cta-buttons-wrapper" style={{background:'none'}}>
-            <Link to="/fotos"><ButtonCTA>
-            Ver Programación</ButtonCTA></Link>
+          <BoxCTA className='cta-buttons-wrapper'>
+            <Link to="/fotos">
+              <ButtonCTA>Ver Programación</ButtonCTA>
+            </Link>
           </BoxCTA>
         </Wrapper>
       </Section>

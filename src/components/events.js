@@ -72,8 +72,8 @@ export default class Events extends Component {
 
     return (
       <Section style={{border:'none',margin:'13% auto'}}>
-      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(200,0,0,0.4)'}}>
-        <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.5)',color:'#ffff55'}}>
+      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.8)'}}>
+        <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.8)',color:'#ffff55'}}>
         Eventos</H1>
       </div>
   	    <Wrapper id="wrapper-fotos" className="icons-wrapper album-fotos">

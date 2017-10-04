@@ -23,7 +23,7 @@ export default class MainNav extends React.Component {
     const Wrapper = styled.div`
       position: relative;
       z-index: 9 !important;
-      background: rgba(0,0,200,0.5);
+      background: rgba(255,255,50,0.8);
       margin: -50px auto 80px;
       > ul {
         font-size: 1em;
@@ -34,7 +34,7 @@ export default class MainNav extends React.Component {
         > span { display: none }
         > div { ${ flex.row }
           > li { max-width: 15%; padding: 0.2em 2em;
-              > a { color: khaki; }
+              > a { color: steelblue; }
             &:hover { background: #ffff55;
               > a { color: blue; }
             }
