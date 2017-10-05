@@ -142,7 +142,7 @@ class App extends Component {
         <ThemeProvider theme={ greenTheme }>
           <Container_main>
             <WrapperMax1100>
-              <Route path='/' component={HeaderLarge}/>            
+              <Route path='/' component={HeaderLarge}/>
               <Route path='/' render={this.renderMainNav.bind(this)}/>
               <Route exact={true} path='/' component={SliderTop}/>
               <Route exact={true} path='/' render={this.renderCTA_Small.bind(this)}/>
@@ -154,6 +154,7 @@ class App extends Component {
               <Route path='/blog' component={Blog}/>
               <Route path='/contact' component={ContactPage}/>
               <Route path='/fotos' render={renderAllPics}/>
+              <Route path='/events' render={renderEvents}/>              
             </WrapperMax1100>
             <Route path='/' component={Footer}/>
           </Container_main>

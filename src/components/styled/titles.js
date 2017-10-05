@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { media } from './medias'
 
 export const TitleCTA = styled.h3`
+  margin: 3% 0 0;
   font-weight: 100;
   font-size: 1.8em;
   color: rgb(255,255,50);
   ${ media.desktop`
-  font-size: 1.8em;
   text-align: center;
   `};
   ${ media.tablet`

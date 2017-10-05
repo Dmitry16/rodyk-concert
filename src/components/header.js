@@ -26,7 +26,7 @@ class HeaderLarge extends React.Component {
       flex-direction: row;
       align-items: center;
       width: 100%;
-      margin: 1% 0;
+      margin: 1% 0 0;
       height: 14em;
       > p, h1 {
         font-size: 4em;
@@ -34,7 +34,7 @@ class HeaderLarge extends React.Component {
         }
       ${ media.desktop`height: 12em;
         > p, h1 {
-          font-size: 4em; padding: 0; margin: 0;
+          font-size: 4em; padding: 0;
         }
         > h1 {background: rgba(0,0,200,0.5) !important;
               }`};

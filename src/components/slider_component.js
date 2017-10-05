@@ -12,7 +12,7 @@ import Modal from './modal'
 import styled from 'styled-components'
 import { media } from './styled/medias'
 import { Title } from './styled/titles'
-import { Button } from './styled/buttons'
+import { Button, ButtonCTA } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1 } from './styled/typographies'
@@ -71,7 +71,7 @@ export default class Slider extends Component {
 
     return (
       <Section>
-      <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.6)'}}>
+      <div style={{margin:'3% auto 7%',padding:'5%',width:'35%',height:'6em',background:'rgba(255,255,50,0.6)'}}>
         <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.8)',color:'#ffff55'}}>
         Album de Fotos</H1>
       </div>
@@ -91,11 +91,11 @@ export default class Slider extends Component {
 
             <wrprBtn id='wrprBtn' style={{border:'none'}}>
               <Link to="/fotos" style={{border:'none'}}>
-                <Button
+                <ButtonCTA
                   style={{border:'none',background:'rgba(250,0,0,0.3)'}}
                   onClick={this.showAllPics.bind(this)}>
                   Todas Fotos
-                </Button>
+                </ButtonCTA>
               </Link>
             </wrprBtn>
         </Wrapper>

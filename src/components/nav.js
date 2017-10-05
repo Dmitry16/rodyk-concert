@@ -79,7 +79,7 @@ export default class MainNav extends React.Component {
                 <Link to='/'>Inicio</Link>
               </li>
               <li>
-                <Link to='/about'>Programación</Link>
+                <Link to='/events'>Programación</Link>
               </li>
               <li>
                 <Link to='/fotos'>

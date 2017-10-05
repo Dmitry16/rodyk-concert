@@ -8,11 +8,11 @@ import { fetchAllPics } from '../actions/picsActions'
 import { closeModal } from '../actions/modalActions'
 //Components
 import Modal from './modal'
-//Styled componentsimport styled from "styled-components";
+//Styled components
 import styled from 'styled-components'
 import { media } from './styled/medias'
 import { Title } from './styled/titles'
-import { Button } from './styled/buttons'
+import { Button, ButtonCTA } from './styled/buttons'
 import { Box } from './styled/boxes'
 import { Section, PicWrapper } from './styled/wrappers'
 import { H1 } from './styled/typographies'
@@ -71,7 +71,7 @@ export default class Events extends Component {
     })
 
     return (
-      <Section style={{border:'none',margin:'17% auto'}}>
+      <Section style={{border:'none',margin:'5% auto 15%'}}>
       <div style={{margin:'3% auto',padding:'3%',width:'25%',height:'6em',background:'rgba(255,255,50,0.6)'}}>
         <H1 style={{margin:'-12% -25%',padding:'8% 10%',width:'100%',background:'rgba(0,0,200,0.8)',color:'#ffff55'}}>
         Eventos</H1>
@@ -92,11 +92,11 @@ export default class Events extends Component {
 
             <wrprBtn id='wrprBtn' style={{border:'none'}}>
               <Link to="/fotos" style={{border:'none'}}>
-                <Button
+                <ButtonCTA
                   style={{border:'none',background:'rgba(250,0,0,0.3)'}}
                   onClick={this.showAllPics.bind(this)}>
                   Todos Eventos
-                </Button>
+                </ButtonCTA>
               </Link>
             </wrprBtn>
         </Wrapper>

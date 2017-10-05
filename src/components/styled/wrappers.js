@@ -21,8 +21,8 @@ export const WrapperMax1100 = styled.div`
 `
 export const Section = styled.section`
   border: none;
-  margin: 0 0 5%;
-  padding: 2% 0;
+  margin: 0;
+  padding: 1% 0;
   background: rgba(0,0,100,0.6);
   text-align: center;
 `
